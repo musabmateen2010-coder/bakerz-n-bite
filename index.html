@@ -1,0 +1,3497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakerz Bite | Where Smiles Are Served Daily</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="chatbot.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+</head>
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem("theme");
+      document.documentElement.setAttribute("data-bs-theme", saved === "light" ? "light" : "dark");
+    } catch (e) { }
+  })();
+</script>
+
+<body>
+
+  <!-- AISHA -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo-icon.png" alt="Bakerz Bite logo" class="brand-logo-img">
+          <div class="brand-title">
+            <p class="logo"><span
+                class="logoname">Bakerz</span><span class="bite-word logoname2"><em>Bite</em></span></p>
+          </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            <a class="nav-link" href="#products">Products</a>
+            <a class="nav-link" href="#main">Merchandise</a>
+            <a class="nav-link" href="#offers">Offers</a>
+            <a class="nav-link" href="#gallery-wrap">Gallery</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#faq">FAQ</a>
+            <a class="nav-link" href="#contact">Contact Us</a>
+
+          </div>
+
+          <button type="button" class="theme-toggle ms-auto" id="themeToggle" aria-label="Switch to light theme"
+            title="Switch theme">
+            <i class="fa-solid fa-sun icon-sun"></i>
+            <i class="fa-solid fa-moon icon-moon"></i>
+          </button>
+
+          <div class="carticon">
+            <button type="button" class="cart" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+
+              <i class="fa-solid fa-cart-shopping"></i>
+              View Cart
+
+              <span id="cartCount">0</span>
+            </button>
+          </div>
+        </div>
+    </nav>
+
+
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-wash"></div>
+      <div class="hero-orb o1"></div>
+      <div class="hero-orb o2"></div>
+      <div class="hero-orb o3"></div>
+      <div class="hero-particles" aria-hidden="true"></div>
+
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-6">
+            <p class="mt-5">BAKED FRESH • SERVED DAILY</p>
+            <h1 class="brand-title">
+              Where Every <span class="bite-word"><em>Bite</em></span> Brings a Smile
+            </h1>
+
+
+            <p class="mt-2">Freshly crafted cakes, pastries, cookies and desserts <br> made with carefully selected
+              ingredients.</p>
+
+            <button class="mt-2"><a href="#products">Explore Our Menu</a></button>
+            <button><a href="#offers">View Offers</a></button>
+
+            <ul class="d-flex mt-5 ms-3">
+              <li>Real Butter</li>
+              <li>Baked Daily</li>
+              <li>Premium Ingredients</li>
+            </ul>
+
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-art">
+              <svg class="bk-art" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="Animated illustration of a caramel and chocolate tiered cake with a cupcake, macarons and a donut">
+                <defs>
+                  <radialGradient id="bkBg" cx="50%" cy="42%" r="62%">
+                    <stop offset="0" style="stop-color:var(--bk-bg0)" />
+                    <stop offset=".55" style="stop-color:var(--bk-bg1)" />
+                    <stop offset="1" style="stop-color:var(--bk-bg2)" />
+                  </radialGradient>
+                  <linearGradient id="bkPink" x1="0" x2="1">
+                    <stop offset="0" stop-color="#f0c6c9" />
+                    <stop offset=".4" stop-color="#f8dfe0" />
+                    <stop offset="1" stop-color="#d88999" />
+                  </linearGradient>
+                  <linearGradient id="bkLav" x1="0" x2="1">
+                    <stop offset="0" stop-color="#c66a7c" />
+                    <stop offset=".4" stop-color="#e1a0ab" />
+                    <stop offset="1" stop-color="#a94b5d" />
+                  </linearGradient>
+                  <linearGradient id="bkRose" x1="0" x2="1">
+                    <stop offset="0" stop-color="#f3d4d7" />
+                    <stop offset=".4" stop-color="#fff0ed" />
+                    <stop offset="1" stop-color="#dca0a9" />
+                  </linearGradient>
+                  <linearGradient id="bkPlate" x1="0" x2="1">
+                    <stop offset="0" stop-color="#a94b5d" />
+                    <stop offset=".5" stop-color="#d78b99" />
+                    <stop offset="1" stop-color="#8f1d35" />
+                  </linearGradient>
+                  <linearGradient id="bkStand" x1="0" x2="1">
+                    <stop offset="0" stop-color="#6b2637" />
+                    <stop offset=".5" stop-color="#8f3a4f" />
+                    <stop offset="1" stop-color="#5b1728" />
+                  </linearGradient>
+                  <radialGradient id="bkPearl" cx="35%" cy="30%" r="75%">
+                    <stop offset="0" stop-color="#FFFFFF" />
+                    <stop offset="1" stop-color="#f8eee6" />
+                  </radialGradient>
+                  <radialGradient id="bkCherry" cx="35%" cy="30%" r="80%">
+                    <stop offset="0" stop-color="#e08a98" />
+                    <stop offset=".6" stop-color="#9e2945" />
+                    <stop offset="1" stop-color="#64152a" />
+                  </radialGradient>
+                  <linearGradient id="bkFlame" x1="0" y1="1" x2="0" y2="0">
+                    <stop offset="0" stop-color="#d85b74" />
+                    <stop offset=".6" stop-color="#f0a5b1" />
+                    <stop offset="1" stop-color="#ffe6e7" />
+                  </linearGradient>
+                  <radialGradient id="bkGlow">
+                    <stop offset="0" stop-color="#f8d9dc" stop-opacity=".85" />
+                    <stop offset="1" stop-color="#f8d9dc" stop-opacity="0" />
+                  </radialGradient>
+                  <linearGradient id="bkWrap" x1="0" x2="1">
+                    <stop offset="0" stop-color="#a94b5d" />
+                    <stop offset=".5" stop-color="#d27d8e" />
+                    <stop offset="1" stop-color="#8f3a4f" />
+                  </linearGradient>
+                  <linearGradient id="bkDonut" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#f2cbd0" />
+                    <stop offset="1" stop-color="#d995a1" />
+                  </linearGradient>
+                </defs>
+                <g style="--depth:6">
+                  <circle cx="260" cy="268" r="212" fill="url(#bkBg)" />
+                  <circle class="bk-ring" cx="260" cy="268" r="232" fill="none" stroke="#b73550" stroke-opacity=".45"
+                    stroke-width="2" stroke-dasharray="3 13" stroke-linecap="round" />
+                  <circle class="bk-ring bk-ring-rev" cx="260" cy="268" r="196" fill="none" stroke="#7f2335"
+                    stroke-opacity=".35" stroke-width="1.6" stroke-dasharray="1 9" stroke-linecap="round" />
+                  <circle class="bk-glow-orb" cx="190" cy="150" r="70" fill="#FFFFFF" />
+                </g>
+                <g style="--depth:10">
+                  <path class="bk-spark" style="animation-delay:0s"
+                    d="M70 99 Q72.86 107.14 81 110 Q72.86 112.86 70 121 Q67.14 112.86 59 110 Q67.14 107.14 70 99Z"
+                    fill="#b73550" />
+                  <path class="bk-spark" style="animation-delay:0.8s"
+                    d="M455 246 Q457.34 252.66 464 255 Q457.34 257.34 455 264 Q452.66 257.34 446 255 Q452.66 252.66 455 246Z"
+                    fill="#7f2335" />
+                  <path class="bk-spark" style="animation-delay:1.5s"
+                    d="M110 293 Q111.82 298.18 117 300 Q111.82 301.82 110 307 Q108.18 301.82 103 300 Q108.18 298.18 110 293Z"
+                    fill="#FFFFFF" />
+                  <path class="bk-spark" style="animation-delay:0.4s"
+                    d="M395 52 Q397.08 57.92 403 60 Q397.08 62.08 395 68 Q392.92 62.08 387 60 Q392.92 57.92 395 52Z"
+                    fill="#FFFFFF" />
+                  <path class="bk-spark" style="animation-delay:1.2s"
+                    d="M330 144 Q331.56 148.44 336 150 Q331.56 151.56 330 156 Q328.44 151.56 324 150 Q328.44 148.44 330 144Z"
+                    fill="#b73550" />
+                  <path class="bk-spark" style="animation-delay:2s"
+                    d="M60 422 Q62.08 427.92 68 430 Q62.08 432.08 60 438 Q57.92 432.08 52 430 Q57.92 427.92 60 422Z"
+                    fill="#7f2335" />
+                  <path class="bk-spark" style="animation-delay:1.1s"
+                    d="M485 410 Q487.6 417.4 495 420 Q487.6 422.6 485 430 Q482.4 422.6 475 420 Q482.4 417.4 485 410Z"
+                    fill="#b73550" />
+                  <path class="bk-spark" style="animation-delay:1.9s"
+                    d="M215 85 Q216.82 90.18 222 92 Q216.82 93.82 215 99 Q213.18 93.82 208 92 Q213.18 90.18 215 85Z"
+                    fill="#FFFFFF" />
+                  <path class="bk-spark" style="animation-delay:0.6s"
+                    d="M300 464 Q301.56 468.44 306 470 Q301.56 471.56 300 476 Q298.44 471.56 294 470 Q298.44 468.44 300 464Z"
+                    fill="#FFFFFF" />
+                </g>
+                <g style="--depth:16">
+                  <rect class="bk-sprinkle" style="animation-delay:-3.2s;animation-duration:7s" x="235" y="147"
+                    width="9" height="3.2" rx="1.6" fill="#b73550" transform="rotate(137 235 147)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-4.7s;animation-duration:11s" x="118" y="257"
+                    width="9" height="3.2" rx="1.6" fill="#7f2335" transform="rotate(9 118 257)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-3.3s;animation-duration:8s" x="114" y="292"
+                    width="9" height="3.2" rx="1.6" fill="#b73550" transform="rotate(141 114 292)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-6.6s;animation-duration:7s" x="287" y="100"
+                    width="9" height="3.2" rx="1.6" fill="#7f2335" transform="rotate(161 287 100)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-7.6s;animation-duration:11s" x="391" y="368"
+                    width="9" height="3.2" rx="1.6" fill="#cdb6b7" transform="rotate(101 391 368)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-0.4s;animation-duration:8s" x="95" y="183" width="9"
+                    height="3.2" rx="1.6" fill="#f3c5c9" transform="rotate(107 95 183)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-0.9s;animation-duration:9s" x="143" y="346"
+                    width="9" height="3.2" rx="1.6" fill="#cdb6b7" transform="rotate(46 143 346)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-4.6s;animation-duration:8s" x="122" y="367"
+                    width="9" height="3.2" rx="1.6" fill="#f3c5c9" transform="rotate(24 122 367)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-0.5s;animation-duration:7s" x="350" y="434"
+                    width="9" height="3.2" rx="1.6" fill="#cdb6b7" transform="rotate(52 350 434)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-4.3s;animation-duration:9s" x="324" y="418"
+                    width="9" height="3.2" rx="1.6" fill="#FFFFFF" transform="rotate(149 324 418)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-2.4s;animation-duration:8s" x="302" y="255"
+                    width="9" height="3.2" rx="1.6" fill="#f0c6c9" transform="rotate(62 302 255)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-2.4s;animation-duration:10s" x="111" y="364"
+                    width="9" height="3.2" rx="1.6" fill="#f3c5c9" transform="rotate(114 111 364)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-7.8s;animation-duration:7s" x="217" y="381"
+                    width="9" height="3.2" rx="1.6" fill="#cdb6b7" transform="rotate(107 217 381)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-1.2s;animation-duration:10s" x="154" y="245"
+                    width="9" height="3.2" rx="1.6" fill="#FFFFFF" transform="rotate(10 154 245)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-6.1s;animation-duration:11s" x="412" y="109"
+                    width="9" height="3.2" rx="1.6" fill="#f3c5c9" transform="rotate(87 412 109)" />
+                  <rect class="bk-sprinkle" style="animation-delay:-4.8s;animation-duration:11s" x="425" y="249"
+                    width="9" height="3.2" rx="1.6" fill="#FFFFFF" transform="rotate(17 425 249)" />
+                </g>
+                <g style="--depth:14">
+                  <ellipse class="bk-shadow" cx="260" cy="494" rx="124" ry="11" fill="#6b3944" opacity=".2" />
+                  <g class="bk-bob">
+                    <path d="M246 420 Q259 440 238 470 L282 470 Q261 440 274 420Z" fill="url(#bkStand)" />
+                    <ellipse cx="260" cy="472" rx="64" ry="10" fill="#6b3944" />
+                    <ellipse cx="260" cy="468" rx="64" ry="10" fill="url(#bkStand)" />
+                    <ellipse cx="260" cy="410" rx="160" ry="21" fill="#B87D5F" />
+                    <ellipse cx="260" cy="402" rx="160" ry="21" fill="url(#bkPlate)" />
+                    <ellipse cx="260" cy="402" rx="148" ry="16.5" fill="none" stroke="#FFFFFF" stroke-opacity=".75"
+                      stroke-width="1.6" />
+                    <circle cx="116.0" cy="408.8" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="131.5" cy="413.3" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="147.0" cy="416.0" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="162.5" cy="417.9" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="178.0" cy="419.4" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="193.5" cy="420.5" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="209.0" cy="421.4" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="224.5" cy="422.0" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="240.0" cy="422.3" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="255.5" cy="422.5" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="271.0" cy="422.4" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="286.5" cy="422.2" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="302.0" cy="421.7" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="317.5" cy="421.0" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="333.0" cy="420.1" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="348.5" cy="418.8" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="364.0" cy="417.2" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="379.5" cy="415.0" r="2.6" fill="url(#bkPearl)" />
+                    <circle cx="395.0" cy="411.8" r="2.6" fill="url(#bkPearl)" />
+                    <path d="M150 338 V398 A110 13 0 0 0 370 398 V338 Z" fill="url(#bkPink)" />
+                    <rect x="160" y="352" width="6" height="42" rx="3" fill="#FFFFFF" opacity=".28" />
+                    <rect x="150" y="338" width="220" height="16" fill="#FEF9F4" />
+                    <rect x="160.5" y="349" width="12" height="23" rx="6.0" fill="#FEF9F4" />
+                    <rect x="177.5" y="349" width="12" height="35" rx="6.0" fill="#FEF9F4" />
+                    <rect x="194.5" y="349" width="12" height="19" rx="6.0" fill="#FEF9F4" />
+                    <rect x="211.5" y="349" width="12" height="39" rx="6.0" fill="#FEF9F4" />
+                    <rect x="228.5" y="349" width="12" height="25" rx="6.0" fill="#FEF9F4" />
+                    <rect x="245.5" y="349" width="12" height="33" rx="6.0" fill="#FEF9F4" />
+                    <rect x="262.5" y="349" width="12" height="17" rx="6.0" fill="#FEF9F4" />
+                    <rect x="279.5" y="349" width="12" height="37" rx="6.0" fill="#FEF9F4" />
+                    <rect x="296.5" y="349" width="12" height="27" rx="6.0" fill="#FEF9F4" />
+                    <rect x="313.5" y="349" width="12" height="21" rx="6.0" fill="#FEF9F4" />
+                    <rect x="330.5" y="349" width="12" height="35" rx="6.0" fill="#FEF9F4" />
+                    <rect x="347.5" y="349" width="12" height="25" rx="6.0" fill="#FEF9F4" />
+                    <ellipse cx="260" cy="338" rx="110" ry="13" fill="#FEF9F4" />
+                    <ellipse cx="260" cy="338" rx="104" ry="10" fill="none" stroke="#EDD4BE" stroke-width="1.2"
+                      opacity=".55" />
+                    <circle cx="158.0" cy="402.4" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="173.0" cy="405.5" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="188.0" cy="407.3" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="203.0" cy="408.6" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="218.0" cy="409.5" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="233.0" cy="410.1" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="248.0" cy="410.4" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="263.0" cy="410.5" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="278.0" cy="410.3" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="293.0" cy="409.9" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="308.0" cy="409.2" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="323.0" cy="408.2" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="338.0" cy="406.7" r="3.4" fill="url(#bkPearl)" />
+                    <circle cx="353.0" cy="404.4" r="3.4" fill="url(#bkPearl)" />
+                    <g class="bk-flower" style="animation-delay:0s;transform-origin:196px 366px">
+                      <circle cx="203.0" cy="366.0" r="5.7" fill="#FFFFFF" />
+                      <circle cx="199.5" cy="372.1" r="5.7" fill="#FFFFFF" />
+                      <circle cx="192.5" cy="372.1" r="5.7" fill="#FFFFFF" />
+                      <circle cx="189.0" cy="366.0" r="5.7" fill="#FFFFFF" />
+                      <circle cx="192.5" cy="359.9" r="5.7" fill="#FFFFFF" />
+                      <circle cx="199.5" cy="359.9" r="5.7" fill="#FFFFFF" />
+                      <circle cx="196" cy="366" r="5.0" fill="#F4B860" />
+                      <circle cx="194.6" cy="364.6" r="1.5" fill="#FFFFFF" opacity=".7" />
+                    </g>
+                    <g class="bk-flower" style="animation-delay:0.5s;transform-origin:260px 376px">
+                      <circle cx="268.5" cy="376.0" r="7.0" fill="#FAE9DB" />
+                      <circle cx="264.2" cy="383.4" r="7.0" fill="#FAE9DB" />
+                      <circle cx="255.8" cy="383.4" r="7.0" fill="#FAE9DB" />
+                      <circle cx="251.5" cy="376.0" r="7.0" fill="#FAE9DB" />
+                      <circle cx="255.8" cy="368.6" r="7.0" fill="#FAE9DB" />
+                      <circle cx="264.2" cy="368.6" r="7.0" fill="#FAE9DB" />
+                      <circle cx="260" cy="376" r="6.1" fill="#F4B860" />
+                      <circle cx="258.3" cy="374.3" r="1.9" fill="#FFFFFF" opacity=".7" />
+                    </g>
+                    <g class="bk-flower" style="animation-delay:1s;transform-origin:324px 366px">
+                      <circle cx="331.0" cy="366.0" r="5.7" fill="#FFFFFF" />
+                      <circle cx="327.5" cy="372.1" r="5.7" fill="#FFFFFF" />
+                      <circle cx="320.5" cy="372.1" r="5.7" fill="#FFFFFF" />
+                      <circle cx="317.0" cy="366.0" r="5.7" fill="#FFFFFF" />
+                      <circle cx="320.5" cy="359.9" r="5.7" fill="#FFFFFF" />
+                      <circle cx="327.5" cy="359.9" r="5.7" fill="#FFFFFF" />
+                      <circle cx="324" cy="366" r="5.0" fill="#F4B860" />
+                      <circle cx="322.6" cy="364.6" r="1.5" fill="#FFFFFF" opacity=".7" />
+                    </g>
+                    <g class="bk-sprig" style="transform-origin:222px 391px">
+                      <path d="M222 391 Q228 369 225 345" stroke="#989285" stroke-width="2" fill="none"
+                        stroke-linecap="round" />
+                      <ellipse cx="223.0" cy="379.0" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(25 223.0 379.0)" />
+                      <ellipse cx="229.2" cy="372.8" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(-25 229.2 372.8)" />
+                      <ellipse cx="222.6" cy="366.6" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(25 222.6 366.6)" />
+                      <ellipse cx="228.8" cy="360.4" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(-25 228.8 360.4)" />
+                      <ellipse cx="222.2" cy="354.2" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(25 222.2 354.2)" />
+                      <ellipse cx="228.4" cy="348.0" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(-25 228.4 348.0)" />
+                    </g>
+                    <g class="bk-sprig" style="transform-origin:298px 391px">
+                      <path d="M298 391 Q292 369 295 345" stroke="#989285" stroke-width="2" fill="none"
+                        stroke-linecap="round" />
+                      <ellipse cx="297.0" cy="379.0" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(-25 297.0 379.0)" />
+                      <ellipse cx="290.8" cy="372.8" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(25 290.8 372.8)" />
+                      <ellipse cx="297.4" cy="366.6" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(-25 297.4 366.6)" />
+                      <ellipse cx="291.2" cy="360.4" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(25 291.2 360.4)" />
+                      <ellipse cx="297.8" cy="354.2" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(-25 297.8 354.2)" />
+                      <ellipse cx="291.6" cy="348.0" rx="2.6" ry="4.2" fill="#C17854"
+                        transform="rotate(25 291.6 348.0)" />
+                    </g>
+                    <g class="bk-flower" style="animation-delay:1.4s;transform-origin:158px 372px">
+                      <circle cx="163.0" cy="372.0" r="4.1" fill="#DFA78B" />
+                      <circle cx="160.5" cy="376.3" r="4.1" fill="#DFA78B" />
+                      <circle cx="155.5" cy="376.3" r="4.1" fill="#DFA78B" />
+                      <circle cx="153.0" cy="372.0" r="4.1" fill="#DFA78B" />
+                      <circle cx="155.5" cy="367.7" r="4.1" fill="#DFA78B" />
+                      <circle cx="160.5" cy="367.7" r="4.1" fill="#DFA78B" />
+                      <circle cx="158" cy="372" r="3.6" fill="#FFFFFF" />
+                      <circle cx="157.0" cy="371.0" r="1.1" fill="#FFFFFF" opacity=".7" />
+                    </g>
+                    <g class="bk-flower" style="animation-delay:1.9s;transform-origin:362px 372px">
+                      <circle cx="367.0" cy="372.0" r="4.1" fill="#DFA78B" />
+                      <circle cx="364.5" cy="376.3" r="4.1" fill="#DFA78B" />
+                      <circle cx="359.5" cy="376.3" r="4.1" fill="#DFA78B" />
+                      <circle cx="357.0" cy="372.0" r="4.1" fill="#DFA78B" />
+                      <circle cx="359.5" cy="367.7" r="4.1" fill="#DFA78B" />
+                      <circle cx="364.5" cy="367.7" r="4.1" fill="#DFA78B" />
+                      <circle cx="362" cy="372" r="3.6" fill="#FFFFFF" />
+                      <circle cx="361.0" cy="371.0" r="1.1" fill="#FFFFFF" opacity=".7" />
+                    </g>
+                    <path d="M182 280 V338 A78 10 0 0 0 338 338 V280 Z" fill="url(#bkLav)" />
+                    <rect x="192" y="294" width="6" height="40" rx="3" fill="#FFFFFF" opacity=".28" />
+                    <rect x="182" y="280" width="156" height="13" fill="#F1B99D" />
+                    <rect x="192.8" y="288" width="12" height="19" rx="6.0" fill="#F1B99D" />
+                    <rect x="210.2" y="288" width="12" height="29" rx="6.0" fill="#F1B99D" />
+                    <rect x="227.8" y="288" width="12" height="17" rx="6.0" fill="#F1B99D" />
+                    <rect x="245.2" y="288" width="12" height="33" rx="6.0" fill="#F1B99D" />
+                    <rect x="262.8" y="288" width="12" height="21" rx="6.0" fill="#F1B99D" />
+                    <rect x="280.2" y="288" width="12" height="27" rx="6.0" fill="#F1B99D" />
+                    <rect x="297.8" y="288" width="12" height="17" rx="6.0" fill="#F1B99D" />
+                    <rect x="315.2" y="288" width="12" height="31" rx="6.0" fill="#F1B99D" />
+                    <ellipse cx="260" cy="280" rx="78" ry="10" fill="#F1B99D" />
+                    <ellipse cx="260" cy="280" rx="72" ry="7" fill="none" stroke="#EDD4BE" stroke-width="1.2"
+                      opacity=".55" />
+                    <rect x="182" y="304" width="156" height="9" fill="#7f2335" opacity=".9" />
+                    <circle cx="190.0" cy="308.5" r="1.9" fill="#FFFFFF" opacity=".85" />
+                    <circle cx="204.2" cy="308.5" r="1.9" fill="#FFFFFF" opacity=".85" />
+                    <circle cx="218.4" cy="308.5" r="1.9" fill="#FFFFFF" opacity=".85" />
+                    <circle cx="232.6" cy="308.5" r="1.9" fill="#FFFFFF" opacity=".85" />
+                    <circle cx="246.8" cy="308.5" r="1.9" fill="#FFFFFF" opacity=".85" />
+                    <circle cx="261.0" cy="308.5" r="1.9" fill="#FFFFFF" opacity=".85" />
+                    <circle cx="275.2" cy="308.5" r="1.9" fill="#FFFFFF" opacity=".85" />
+                    <circle cx="289.4" cy="308.5" r="1.9" fill="#FFFFFF" opacity=".85" />
+                    <circle cx="303.6" cy="308.5" r="1.9" fill="#FFFFFF" opacity=".85" />
+                    <circle cx="317.8" cy="308.5" r="1.9" fill="#FFFFFF" opacity=".85" />
+                    <circle cx="332.0" cy="308.5" r="1.9" fill="#FFFFFF" opacity=".85" />
+                    <circle cx="190.0" cy="341.9" r="3.1" fill="url(#bkPearl)" />
+                    <circle cx="204.0" cy="344.5" r="3.1" fill="url(#bkPearl)" />
+                    <circle cx="218.0" cy="345.9" r="3.1" fill="url(#bkPearl)" />
+                    <circle cx="232.0" cy="346.8" r="3.1" fill="url(#bkPearl)" />
+                    <circle cx="246.0" cy="347.3" r="3.1" fill="url(#bkPearl)" />
+                    <circle cx="260.0" cy="347.5" r="3.1" fill="url(#bkPearl)" />
+                    <circle cx="274.0" cy="347.3" r="3.1" fill="url(#bkPearl)" />
+                    <circle cx="288.0" cy="346.8" r="3.1" fill="url(#bkPearl)" />
+                    <circle cx="302.0" cy="345.9" r="3.1" fill="url(#bkPearl)" />
+                    <circle cx="316.0" cy="344.5" r="3.1" fill="url(#bkPearl)" />
+                    <circle cx="330.0" cy="341.9" r="3.1" fill="url(#bkPearl)" />
+                    <g class="bk-flower" style="animation-delay:0.8s;transform-origin:260px 322px">
+                      <circle cx="266.0" cy="322.0" r="4.9" fill="#FFFFFF" />
+                      <circle cx="263.0" cy="327.2" r="4.9" fill="#FFFFFF" />
+                      <circle cx="257.0" cy="327.2" r="4.9" fill="#FFFFFF" />
+                      <circle cx="254.0" cy="322.0" r="4.9" fill="#FFFFFF" />
+                      <circle cx="257.0" cy="316.8" r="4.9" fill="#FFFFFF" />
+                      <circle cx="263.0" cy="316.8" r="4.9" fill="#FFFFFF" />
+                      <circle cx="260" cy="322" r="4.3" fill="#f0c6c9" />
+                      <circle cx="258.8" cy="320.8" r="1.3" fill="#FFFFFF" opacity=".7" />
+                    </g>
+                    <path d="M212 232 V280 A48 7 0 0 0 308 280 V232 Z" fill="url(#bkRose)" />
+                    <rect x="222" y="246" width="6" height="30" rx="3" fill="#FFFFFF" opacity=".28" />
+                    <rect x="212" y="232" width="96" height="10" fill="#FEF9F4" />
+                    <rect x="222.5" y="237" width="11" height="17" rx="5.5" fill="#FEF9F4" />
+                    <rect x="238.5" y="237" width="11" height="25" rx="5.5" fill="#FEF9F4" />
+                    <rect x="254.5" y="237" width="11" height="15" rx="5.5" fill="#FEF9F4" />
+                    <rect x="270.5" y="237" width="11" height="23" rx="5.5" fill="#FEF9F4" />
+                    <rect x="286.5" y="237" width="11" height="17" rx="5.5" fill="#FEF9F4" />
+                    <ellipse cx="260" cy="232" rx="48" ry="7" fill="#FEF9F4" />
+                    <ellipse cx="260" cy="232" rx="42" ry="4" fill="none" stroke="#EDD4BE" stroke-width="1.2"
+                      opacity=".55" />
+                    <circle cx="219.0" cy="283.1" r="2.8" fill="url(#bkPearl)" />
+                    <circle cx="231.0" cy="285.1" r="2.8" fill="url(#bkPearl)" />
+                    <circle cx="243.0" cy="286.0" r="2.8" fill="url(#bkPearl)" />
+                    <circle cx="255.0" cy="286.5" r="2.8" fill="url(#bkPearl)" />
+                    <circle cx="267.0" cy="286.4" r="2.8" fill="url(#bkPearl)" />
+                    <circle cx="279.0" cy="285.9" r="2.8" fill="url(#bkPearl)" />
+                    <circle cx="291.0" cy="284.8" r="2.8" fill="url(#bkPearl)" />
+                    <path d="M240 262 q20 14 40 0" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none"
+                      opacity=".7" />
+                    <g class="bk-cherry" style="transform-origin:236px 200px">
+                      <path d="M236 218 Q234 204 244 196" stroke="#7a5b63" stroke-width="2.4" fill="none"
+                        stroke-linecap="round" />
+                      <ellipse cx="248" cy="196" rx="7" ry="3" fill="#AFA795" transform="rotate(-30 248 196)" />
+                      <circle cx="236" cy="226" r="10.5" fill="url(#bkCherry)" />
+                      <ellipse cx="232.5" cy="222" rx="3.2" ry="2.2" fill="#FFFFFF" opacity=".7" />
+                    </g>
+                    <g class="bk-flower" style="animation-delay:0.3s;transform-origin:285px 224px">
+                      <circle cx="290.5" cy="224.0" r="4.5" fill="#f0c6c9" />
+                      <circle cx="287.8" cy="228.8" r="4.5" fill="#f0c6c9" />
+                      <circle cx="282.2" cy="228.8" r="4.5" fill="#f0c6c9" />
+                      <circle cx="279.5" cy="224.0" r="4.5" fill="#f0c6c9" />
+                      <circle cx="282.2" cy="219.2" r="4.5" fill="#f0c6c9" />
+                      <circle cx="287.8" cy="219.2" r="4.5" fill="#f0c6c9" />
+                      <circle cx="285" cy="224" r="4.0" fill="#f3c5c9" />
+                      <circle cx="283.9" cy="222.9" r="1.2" fill="#FFFFFF" opacity=".7" />
+                    </g>
+                    <rect x="256.5" y="196" width="7" height="34" rx="2.5" fill="#FEF9F4" />
+                    <rect x="256.5" y="203" width="7" height="4" fill="#f0c6c9" />
+                    <rect x="256.5" y="212" width="7" height="4" fill="#f0c6c9" />
+                    <rect x="256.5" y="221" width="7" height="4" fill="#f0c6c9" />
+                    <rect x="259.3" y="190" width="1.6" height="7" rx=".8" fill="#6b3944" />
+                    <circle class="bk-flameglow" cx="260" cy="180" r="30" fill="url(#bkGlow)" />
+                    <g class="bk-flame">
+                      <path d="M260 192 C252 184 254 172 260 160 C266 172 268 184 260 192Z" fill="url(#bkFlame)" />
+                      <path d="M260 190 C256.5 185 257.5 178 260 172 C262.5 178 263.5 185 260 190Z" fill="#FFFBE0"
+                        opacity=".9" />
+                    </g>
+                  </g>
+                  <g transform="translate(215 160) scale(0.8)">
+                    <path class="bk-heart" style="animation-delay:0s"
+                      d="M0 0 C-6 -8 -16 -2 -9 6 L0 14 L9 6 C16 -2 6 -8 0 0Z" fill="#b73550" />
+                  </g>
+                  <g transform="translate(300 150) scale(0.65)">
+                    <path class="bk-heart" style="animation-delay:1.4s"
+                      d="M0 0 C-6 -8 -16 -2 -9 6 L0 14 L9 6 C16 -2 6 -8 0 0Z" fill="#7f2335" />
+                  </g>
+                  <g transform="translate(250 140) scale(0.55)">
+                    <path class="bk-heart" style="animation-delay:2.6s"
+                      d="M0 0 C-6 -8 -16 -2 -9 6 L0 14 L9 6 C16 -2 6 -8 0 0Z" fill="#f0c6c9" />
+                  </g>
+                  <g transform="translate(330 170) scale(0.7)">
+                    <path class="bk-heart" style="animation-delay:3.6s"
+                      d="M0 0 C-6 -8 -16 -2 -9 6 L0 14 L9 6 C16 -2 6 -8 0 0Z" fill="#b73550" />
+                  </g>
+                </g>
+                <g style="--depth:22">
+                  <g class="bk-bob bk-bob-b">
+                    <ellipse cx="68" cy="452" rx="44" ry="6" fill="#6b3944" opacity=".18" />
+                    <path d="M28 392 L108 392 L97 444 Q68 452 39 444 Z" fill="url(#bkWrap)" />
+                    <path d="M40 394 L43.0 445" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2.2"
+                      stroke-linecap="round" />
+                    <path d="M50 394 L52.2 445" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2.2"
+                      stroke-linecap="round" />
+                    <path d="M60 394 L61.4 445" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2.2"
+                      stroke-linecap="round" />
+                    <path d="M70 394 L70.6 445" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2.2"
+                      stroke-linecap="round" />
+                    <path d="M80 394 L79.8 445" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2.2"
+                      stroke-linecap="round" />
+                    <path d="M90 394 L89.0 445" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2.2"
+                      stroke-linecap="round" />
+                    <path d="M100 394 L98.2 445" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2.2"
+                      stroke-linecap="round" />
+                    <rect x="24" y="383" width="88" height="13" rx="6.5" fill="#CC8866" />
+                    <rect x="28" y="385" width="40" height="3" rx="1.5" fill="#FFFFFF" opacity=".4" />
+                    <path d="M26 390 C16 372 38 360 68 360 C98 360 120 372 110 390Z" fill="#F9E1CC" />
+                    <path d="M38 366 C32 350 50 342 68 342 C86 342 104 350 98 366Z" fill="#F6D2B3" />
+                    <path d="M50 348 C50 334 60 326 68 316 C76 326 86 334 86 348Z" fill="#F2C39A" />
+                    <path d="M40 376 q28 12 56 0" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" fill="none"
+                      opacity=".6" />
+                    <path d="M52 354 q16 9 32 0" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none"
+                      opacity=".6" />
+                    <rect x="41" y="378.9" width="6" height="2.2" rx="1.1" fill="#FFFFFF"
+                      transform="rotate(20 44 380)" />
+                    <rect x="81" y="376.9" width="6" height="2.2" rx="1.1" fill="#f3c5c9"
+                      transform="rotate(-30 84 378)" />
+                    <rect x="59" y="366.9" width="6" height="2.2" rx="1.1" fill="#a94b5d"
+                      transform="rotate(70 62 368)" />
+                    <rect x="75" y="354.9" width="6" height="2.2" rx="1.1" fill="#FFFFFF"
+                      transform="rotate(10 78 356)" />
+                    <rect x="55" y="348.9" width="6" height="2.2" rx="1.1" fill="#FFFFFF"
+                      transform="rotate(-50 58 350)" />
+                    <rect x="93" y="384.9" width="6" height="2.2" rx="1.1" fill="#f3c5c9"
+                      transform="rotate(40 96 386)" />
+                    <rect x="31" y="386.9" width="6" height="2.2" rx="1.1" fill="#cdb6b7"
+                      transform="rotate(-20 34 388)" />
+                    <rect x="67" y="334.9" width="6" height="2.2" rx="1.1" fill="#a94b5d"
+                      transform="rotate(30 70 336)" />
+                    <g class="bk-cherry" style="transform-origin:68px 312px">
+                      <path d="M68 312 Q70 300 78 296" stroke="#7a5b63" stroke-width="2.2" fill="none"
+                        stroke-linecap="round" />
+                      <circle cx="68" cy="316" r="8.5" fill="url(#bkCherry)" />
+                      <ellipse cx="65" cy="313" rx="2.6" ry="1.8" fill="#FFFFFF" opacity=".7" />
+                    </g>
+                  </g>
+                </g>
+                <g style="--depth:20">
+                  <g class="bk-bob bk-bob-c">
+                    <ellipse cx="452" cy="458" rx="46" ry="6" fill="#6b3944" opacity=".18" />
+                    <g transform="rotate(-2 452 440)">
+                      <path d="M409.0 444 A43.0 17.2 0 0 0 495.0 444 Z" fill="#f0c6c9" />
+                      <rect x="410.0" y="442" width="84" height="5" rx="2.5" fill="#c87888" />
+                      <rect x="413.0" y="434" width="78" height="10" rx="5" fill="#fff8f2" />
+                      <path d="M409.0 435 A43.0 17.2 0 0 1 495.0 435 Z" fill="#f0c6c9" />
+                      <rect x="410.0" y="432" width="84" height="5" rx="2.5" fill="#c87888" />
+                      <path d="M418.0 426 q17.2 -15.48 36.12 -8.6" stroke="#FFFFFF" stroke-width="2.4"
+                        stroke-linecap="round" fill="none" opacity=".55" />
+                    </g>
+                    <g transform="rotate(3 455 410)">
+                      <path d="M416.0 414 A39.0 15.600000000000001 0 0 0 494.0 414 Z" fill="#b45b70" />
+                      <rect x="417.0" y="412" width="76" height="5" rx="2.5" fill="#8f3a4f" />
+                      <rect x="420.0" y="404" width="70" height="10" rx="5" fill="#fff8f2" />
+                      <path d="M416.0 405 A39.0 15.600000000000001 0 0 1 494.0 405 Z" fill="#b45b70" />
+                      <rect x="417.0" y="402" width="76" height="5" rx="2.5" fill="#8f3a4f" />
+                      <path d="M425.0 396 q15.600000000000001 -14.040000000000001 32.76 -7.800000000000001"
+                        stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" fill="none" opacity=".55" />
+                    </g>
+                    <g transform="rotate(-4 450 382)">
+                      <path d="M415.0 386 A35.0 14.0 0 0 0 485.0 386 Z" fill="#f6dfe1" />
+                      <rect x="416.0" y="384" width="68" height="5" rx="2.5" fill="#dfafb6" />
+                      <rect x="419.0" y="376" width="62" height="10" rx="5" fill="#FFFFFF" />
+                      <path d="M415.0 377 A35.0 14.0 0 0 1 485.0 377 Z" fill="#f6dfe1" />
+                      <rect x="416.0" y="374" width="68" height="5" rx="2.5" fill="#dfafb6" />
+                      <path d="M424.0 368 q14.0 -12.6 29.4 -7.0" stroke="#FFFFFF" stroke-width="2.4"
+                        stroke-linecap="round" fill="none" opacity=".55" />
+                    </g>
+                    <path d="M450 352 C444 344 434 350 440 357 L450 366 L460 357 C466 350 456 344 450 352Z"
+                      fill="#b73550" class="bk-heart-beat" />
+                  </g>
+                </g>
+                <g style="--depth:24">
+                  <g class="bk-bob bk-bob-d">
+                    <g class="bk-spin-slow">
+                      <circle cx="88" cy="168" r="33" fill="#d98b98" />
+                      <path fill-rule="evenodd"
+                        d="M88 138 C106 136 120 148 119 168 C118 188 104 199 88 199 C72 199 58 188 57 168 C56 148 70 140 88 138Z M88 157 a11 11 0 1 0 0.01 0Z"
+                        fill="url(#bkDonut)" />
+                      <circle cx="88" cy="168" r="11" fill="#FEF1E5" />
+                      <rect x="69" y="150.9" width="6" height="2.2" rx="1.1" fill="#f3c5c9"
+                        transform="rotate(20 72 152)" />
+                      <rect x="97" y="148.9" width="6" height="2.2" rx="1.1" fill="#a94b5d"
+                        transform="rotate(-40 100 150)" />
+                      <rect x="105" y="170.9" width="6" height="2.2" rx="1.1" fill="#f3c5c9"
+                        transform="rotate(70 108 172)" />
+                      <rect x="93" y="186.9" width="6" height="2.2" rx="1.1" fill="#FFFFFF"
+                        transform="rotate(10 96 188)" />
+                      <rect x="67" y="182.9" width="6" height="2.2" rx="1.1" fill="#a94b5d"
+                        transform="rotate(-30 70 184)" />
+                      <rect x="61" y="166.9" width="6" height="2.2" rx="1.1" fill="#f3c5c9"
+                        transform="rotate(60 64 168)" />
+                      <rect x="85" y="142.9" width="6" height="2.2" rx="1.1" fill="#7f2335"
+                        transform="rotate(0 88 144)" />
+                      <rect x="109" y="158.9" width="6" height="2.2" rx="1.1" fill="#cdb6b7"
+                        transform="rotate(25 112 160)" />
+                      <path d="M70 156 q8 -10 20 -11" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"
+                        fill="none" opacity=".55" />
+                    </g>
+                  </g>
+                </g>
+                <g style="--depth:12">
+                  <g transform="translate(432 104)">
+                    <g class="bk-bob bk-bob-d">
+                      <circle r="47" style="fill:var(--bk-badge)" opacity=".92" />
+                      <circle r="47" fill="none" stroke="#b73550" stroke-opacity=".5" stroke-dasharray="2 5" />
+                      <g class="bk-spin-slow">
+                        <path id="bkBadgePath" d="M0 -33 a33 33 0 1 1 -0.01 0" fill="none" /><text
+                          font-family="DM Sans, sans-serif" font-size="9.4" font-weight="700" fill="#6b3944">
+                          <textPath href="#bkBadgePath" textLength="204" lengthAdjust="spacing">FRESH ✦ BAKED ✦ DAILY ✦
+                          </textPath>
+                        </text>
+                      </g>
+                      <path class="bk-heart-beat" d="M0 -3 C-4 -9 -12 -4 -7 2 L0 10 L7 2 C12 -4 4 -9 0 -3Z"
+                        fill="#b73550" />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero-waves" aria-hidden="true">
+        <svg class="w1" viewBox="0 0 1600 120" preserveAspectRatio="none">
+          <path d="M0 60 q100 -40 200 0 t200 0 t200 0 t200 0 t200 0 t200 0 t200 0 t200 0 V120 H0Z" opacity=".75" />
+        </svg>
+        <svg class="w2" viewBox="0 0 1600 120" preserveAspectRatio="none">
+          <path d="M0 72 q100 -34 200 0 t200 0 t200 0 t200 0 t200 0 t200 0 t200 0 t200 0 V120 H0Z" opacity=".8" />
+        </svg>
+        <svg class="w3" viewBox="0 0 1600 120" preserveAspectRatio="none">
+          <path d="M0 88 q100 -30 200 0 t200 0 t200 0 t200 0 t200 0 t200 0 t200 0 t200 0 V120 H0Z" />
+        </svg>
+      </div>
+
+    </section>
+
+  </header>
+
+  <section class="countcalc">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="btmhero mt-4 text-center ms-auto">
+
+          <div class="visitor col-lg-3">
+            <span>
+              <i class="fa-solid fa-users"></i>
+              VISITORS TODAY
+            </span>
+
+            <br>
+
+            <em id="visitorNumber">0</em>
+          </div>
+
+
+          <div class="time col-lg-3">
+            <span>
+              <i class="fa-solid fa-clock"></i>
+              TIME RIGHT NOW
+            </span>
+
+            <br>
+
+            <strong id="currentTime">Loading...</strong>
+          </div>
+
+
+          <div class="date col-lg-3">
+            <span>
+              <i class="fa-solid fa-calendar"></i>
+              DATE TODAY
+            </span>
+
+            <br>
+
+            <strong id="currentDate">Loading...</strong>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="about" id="about">
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-1"></div>
+
+
+        <div class="col-lg-6">
+          <img src="assets/about.png" width="2000px" alt="">
+        </div>
+
+      </div>
+
+      <div class="row w-100 story">
+
+        <span class="about-label">
+          OUR STORY
+        </span>
+        <div class="col-lg-9">
+          <h2>About Us</h2>
+          <h5>We believe the most memorable moments begin with something made by hand.</h5>
+          <p>Bakerz Bite is a warm neighbourhood bakery and café offering a generous variety of freshly made baked
+            goods.</p>
+          <p>Every batch
+            begins with real butter, fresh cream, unbleached flour and carefully selected ingredients.</p>
+
+        </div>
+
+        <div class="row mt-4">
+
+          <div class="col-md-4">
+            <div class="about-feature">
+              <i class="fa-solid fa-cake-candles"></i>
+              <h6>300+</h6>
+              <span>BAKED VARIETIES</span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="about-feature">
+              <i class="fa-solid fa-wheat-awn"></i>
+              <h6>FRESH</h6>
+              <span>INGREDIENTS</span>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="about-feature">
+              <i class="fa-solid fa-heart"></i>
+              <h6>DAILY</h6>
+              <span>MADE WITH CARE</span>
+            </div>
+
+          </div>
+
+  </section>
+
+  <!-- MARIHA -->
+
+  <section class="products-heading" id="products">
+
+    <div class="container">
+
+      <h1>
+        Our Delicious Products
+      </h1>
+
+      <p>
+        Freshly baked with love, butter and a little bit of happiness <i class="fa-solid fa-heart" aria-hidden="true"></i>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <div class="container">
+
+    <div class="filter-box">
+
+      <h5 class="filter-title mb-3">
+
+        <i class="fa-solid fa-sliders"></i>
+
+        Find Your Favorite Treat
+
+      </h5>
+
+      <div class="mb-4">
+
+        <button class="category-btn active" data-category="All">
+
+          All
+
+        </button>
+
+        <button class="category-btn" data-category="Cakes">
+
+          Cakes
+
+        </button>
+
+        <button class="category-btn" data-category="Pastries">
+
+          Pastries
+
+        </button>
+
+        <button class="category-btn" data-category="Cookies">
+
+          Cookies
+
+        </button>
+
+        <button class="category-btn" data-category="Pies">
+
+          Pies
+
+        </button>
+
+        <button class="category-btn" data-category="Desserts">
+
+          Desserts
+
+        </button>
+
+        <button class="category-btn" data-category="Beverages">
+
+          Beverages
+
+        </button>
+
+      </div>
+
+
+      <div class="row g-3 align-items-end">
+
+        <div class="col-lg-5">
+
+          <label class="form-label fw-semibold">
+            Search Product
+          </label>
+
+          <div class="input-group">
+
+            <span class="input-group-text search-icon">
+
+              <i class="fa-solid fa-magnifying-glass"></i>
+
+            </span>
+
+            <input type="text" id="searchInput" class="form-control" placeholder="Search cakes, cookies...">
+
+          </div>
+
+        </div>
+
+
+        <div class="col-lg-4">
+
+          <label class="form-label fw-semibold">
+
+            Maximum Price:
+
+            <span class="price-text">
+
+              Rs.
+              <span id="priceValue">
+                4000
+              </span>
+
+            </span>
+
+          </label>
+
+
+          <input type="range" id="priceRange" min="500" max="4000" value="4000">
+
+        </div>
+
+
+        <div class="col-lg-3">
+
+          <label class="form-label fw-semibold">
+            Rating
+          </label>
+
+          <select id="ratingFilter" class="form-select">
+
+            <option value="0">
+              All Ratings
+            </option>
+
+            <option value="4.5">
+              4.5 ★ & above
+            </option>
+
+            <option value="4">
+              4 ★ & above
+            </option>
+
+            <option value="3.5">
+              3.5 ★ & above
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+
+      <h5>
+        Fresh From Our Oven <i class="fa-solid fa-cake-candles ms-1" aria-hidden="true"></i>
+      </h5>
+
+      <span id="resultCount">
+        12 products
+      </span>
+
+    </div>
+
+
+    <div class="row g-4" id="productsContainer">
+
+
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Cakes" data-price="3500" data-rating="4.9"
+        data-name="Chocolate Fudge Cake">
+
+        <div class="product-card">
+
+          <img
+            src="assets/products/chocolatefudgecake.png"
+            class="product-img" alt="Chocolate Fudge Cake">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Cakes
+            </span>
+
+            <h5 class="product-title">
+              Chocolate Fudge Cake
+            </h5>
+
+            <div class="mb-2">
+
+              <span class="stars">
+                ★★★★★
+              </span>
+
+              <span class="rating-number">
+                (4.9)
+              </span>
+
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 3500
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Cakes" data-price="3200" data-rating="4.8"
+        data-name="Strawberry Cake">
+
+        <div class="product-card">
+
+          <img src="assets/products/strawberrycake.png" class="product-img"
+            alt="Strawberry Cake">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Cakes
+            </span>
+
+            <h5 class="product-title">
+              Strawberry Cake
+            </h5>
+
+            <div class="mb-2">
+              <span class="stars">★★★★★</span>
+              <span class="rating-number">(4.8)</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 3200
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Cakes" data-price="3800" data-rating="4.9"
+        data-name="Red Velvet Cake">
+
+        <div class="product-card">
+
+          <img src="assets/products/redvelvetcake.png" class=" product-img"
+            alt="Red Velvet Cake">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Cakes
+            </span>
+
+            <h5 class="product-title">
+              Red Velvet Cake
+            </h5>
+
+            <div class="mb-2">
+              <span class="stars">★★★★★</span>
+              <span class="rating-number">(4.9)</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 3800
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Cakes" data-price="2800" data-rating="4.6"
+        data-name="Classic Vanilla Dream">
+
+        <div class="product-card">
+
+          <img src="assets/products/vanillacake.png" class="product-img"
+            alt="Classic Vanilla Dream">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Cakes
+            </span>
+
+            <h5 class="product-title">
+              Classic Vanilla Dream
+            </h5>
+
+            <div class="mb-2">
+              <span class="stars">★★★★★</span>
+              <span class="rating-number">(4.6)</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 2800
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Pastries" data-price="650" data-rating="4.7"
+        data-name="Classic Croissant">
+
+        <div class="product-card">
+
+          <img src="assets/products/croissant.png" class="product-img"
+            alt="Classic Croissant">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Pastries
+            </span>
+
+            <h5 class="product-title">
+              Classic Croissant
+            </h5>
+
+            <div class="mb-2">
+              <span class="stars">★★★★★</span>
+              <span class="rating-number">(4.7)</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 650
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Pastries" data-price="750" data-rating="4.6"
+        data-name="Almond Danish">
+
+        <div class="product-card">
+
+          <img src="assets/products/danish.png" class="product-img"
+            alt="Almond Danish">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Pastries
+            </span>
+
+            <h5 class="product-title">
+              Almond Danish
+            </h5>
+
+            <div class="mb-2">
+              <span class="stars">★★★★★</span>
+              <span class="rating-number">(4.6)</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 750
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Pastries" data-price="850" data-rating="4.8"
+        data-name="Raspberry Éclair">
+
+        <div class="product-card">
+
+          <img src="assets/products/eclair.png" class="product-img"
+            alt="Raspberry Éclair">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Pastries
+            </span>
+
+            <h5 class="product-title">
+              Raspberry Éclair
+            </h5>
+
+            <div class="mb-2">
+              <span class="stars">★★★★★</span>
+              <span class="rating-number">(4.8)</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 850
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Pastries" data-price="550" data-rating="4.5"
+        data-name="Cinnamon Bun">
+
+        <div class="product-card">
+
+          <img src="assets/products/cinnanonbun.png" class="product-img"
+            alt="Cinnamon Bun">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Pastries
+            </span>
+
+            <h5 class="product-title">
+              Cinnamon Bun
+            </h5>
+
+            <div class="mb-2">
+              <span class="stars">★★★★★</span>
+              <span class="rating-number">(4.5)</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 550
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Cookies" data-price="600" data-rating="4.7"
+        data-name="Chocolate Chip Cookies">
+
+        <div class="product-card">
+
+          <img src="assets/products/chocolatechipcookies.png" class="product-img"
+            alt="Chocolate Chip Cookies">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Cookies
+            </span>
+
+            <h5 class="product-title">
+              Chocolate Chip Cookies
+            </h5>
+
+            <div class="mb-2">
+              <span class="stars">★★★★★</span>
+              <span class="rating-number">(4.7)</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 600
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Cookies" data-price="500" data-rating="4.4"
+        data-name="Sweet Cookies">
+
+        <div class="product-card">
+
+          <img src="assets/products/cookies.png" class="product-img"
+            alt="Sweet Cookies">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Cookies
+            </span>
+
+            <h5 class="product-title">
+              Sweet Cookies
+            </h5>
+
+            <div class="mb-2">
+              <span class="stars">★★★★</span>
+              <span class="rating-number">(4.4)</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 500
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Desserts" data-price="700" data-rating="4.8"
+        data-name="Chocolate Brownie">
+
+        <div class="product-card">
+
+          <img src="assets/products/brownies.png" class="product-img"
+            alt="Chocolate Brownie">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Desserts
+            </span>
+
+            <h5 class="product-title">
+              Chocolate Brownie
+            </h5>
+
+            <div class="mb-2">
+              <span class="stars">★★★★★</span>
+              <span class="rating-number">(4.8)</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 700
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+      <div class="col-xl-3 col-lg-4 col-md-6 product-item" data-category="Desserts" data-price="900" data-rating="4.9"
+        data-name="Coquette Macarons">
+
+        <div class="product-card">
+
+          <img src="assets/products/macrons.png" class="product-img"
+            alt="Coquette Macarons">
+
+          <div class="product-body">
+
+            <span class="product-category">
+              Desserts
+            </span>
+
+            <h5 class="product-title">
+              Coquette Macarons
+            </h5>
+
+            <div class="mb-2">
+              <span class="stars">★★★★★</span>
+              <span class="rating-number">(4.9)</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <span class="product-price">
+                Rs. 900
+              </span>
+
+              <button class="view-btn view-product" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                View
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div id="noProducts">
+
+      <i class="fa-solid fa-cookie-bite fa-3x mb-3"></i>
+
+      <h4>
+        No products found
+      </h4>
+
+      <p>
+        Try another search or filter.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+
+  <div class="modal fade" id="productModal" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+      <div class="modal-content">
+
+        <div class="row g-0">
+
+          <div class="col-md-5 modal-left">
+
+            <img id="modalImage" class="modal-product-img" src="" alt="Product">
+
+          </div>
+
+
+          <div class="col-md-7">
+
+            <div class="modal-right">
+
+              <button type="button" class="btn-close float-end" data-bs-dismiss="modal">
+              </button>
+
+
+              <span id="modalCategory" class="modal-category">
+
+              </span>
+
+
+              <h2 id="modalTitle" class="modal-title mt-2">
+
+              </h2>
+
+
+              <div class="my-2">
+
+                <span class="stars">
+                  ★★★★★
+                </span>
+
+                <span id="modalRating">
+                </span>
+
+              </div>
+
+
+              <h4 id="modalPrice" class="modal-price">
+
+              </h4>
+
+
+              <p id="modalDescription" class="modal-description">
+
+              </p>
+
+
+              <div class="ingredient-box mb-4">
+
+                <strong>
+                  <i class="fa-solid fa-leaf"></i>
+                  Ingredients
+                </strong>
+
+                <p id="modalIngredients" class="mb-0 mt-2">
+
+                </p>
+
+              </div>
+
+
+              <button id="modalCartBtn" class="add-cart-btn">
+
+                <i class="fa-solid fa-cart-plus"></i>
+
+                Add to Cart
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+
+    <div class="offcanvas-header">
+
+      <h5 class="offcanvas-title">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        Your Cart
+
+      </h5>
+
+
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+      </button>
+
+    </div>
+
+
+    <div class="offcanvas-body">
+
+      <div id="cartItems">
+
+        <div class="empty-cart">
+
+          <i class="fa-solid fa-basket-shopping fa-3x mb-3"></i>
+
+          <h5>
+            Your cart is empty
+          </h5>
+
+          <p>
+            Add something delicious! <i class="fa-solid fa-cake-candles ms-1" aria-hidden="true"></i>
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div id="cartBottom" style="display: none;">
+
+        <div class="cart-total mb-3">
+
+          <div class="d-flex justify-content-between">
+
+            <strong>
+              Total
+            </strong>
+
+            <strong id="cartTotal" class="product-price">
+
+              Rs. 0
+
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <button class="checkout-btn">
+
+          <i class="fa-solid fa-credit-card"></i>
+
+          Proceed to Checkout
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- HASNAIN -->
+  
+<div id="offers">
+  <div class="offers-head">
+    <h2>Offers worth celebrating</h2>
+    <p>Seasonal favourites, thoughtful bundles and everyday reasons to share something sweet.</p>
+  </div>
+
+  <div class="offers-grid">
+
+    <div class="offer-card">
+      <div class="card-top"><span class="badge">20% OFF</span><i class="fa-solid fa-wand-sparkles icon"></i></div>
+      <h3>Birthday Cake Special</h3>
+      <p class="desc">Make their day sweeter with a custom celebration cake.</p>
+      <div class="divider"></div>
+      <div class="card-bottom"><span class="valid">Valid through 30 Sep</span><a class="claim">Claim offer <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+
+  
+    <div class="offer-card">
+      <div class="card-top"><span class="badge">BUY 4 + 1</span><i class="fa-solid fa-wand-sparkles icon"></i></div>
+      <h3>Weekend Bakery Deal</h3>
+      <p class="desc">Pick any four pastries and enjoy the fifth on us.</p>
+      <div class="divider"></div>
+      <div class="card-bottom"><span class="valid">Friday to Sunday</span><a class="claim">Claim offer <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+
+    <div class="offer-card">
+      <div class="card-top"><span class="badge">SAVE 15%</span><i class="fa-solid fa-wand-sparkles icon"></i></div>
+      <h3>Family Dessert Box</h3>
+      <p class="desc">A handpicked box of brownies, cookies and macarons.</p>
+      <div class="divider"></div>
+      <div class="card-bottom"><span class="valid">Every Day</span><a class="claim">Claim offer <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+
+    <div class="offer-card">
+      <div class="card-top"><span class="badge">UP TO 25%</span><i class="fa-solid fa-wand-sparkles icon"></i></div>
+      <h3>Buy More, Save More</h3>
+      <p class="desc">Perfect for office treats and joyful gatherings.</p>
+      <div class="divider"></div>
+      <div class="card-bottom"><span class="valid">On 3+ Boxes</span><a class="claim">Claim offer <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+
+
+    <div class="offer-card">
+      <div class="card-top"><span class="badge">NEW</span><i class="fa-solid fa-wand-sparkles icon"></i></div>
+      <h3>Seasonal Special</h3>
+      <p class="desc">Limited raspberry rose cake for the sweetest season.</p>
+      <div class="divider"></div>
+      <div class="card-bottom"><span class="valid">While Stocks Last</span><a class="claim">Claim offer <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+
+    <div class="offer-card">
+      <div class="card-top"><span class="badge">Rs. 899</span><i class="fa-solid fa-wand-sparkles icon"></i></div>
+      <h3>Café Combo</h3>
+      <p class="desc">Your choice of pastry paired with a handcrafted coffee.</p>
+      <div class="divider"></div>
+      <div class="card-bottom"><span class="valid">Weekdays Until 2PM</span><a class="claim">Claim offer <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+
+  </div>
+</div>
+<div id="main">
+  <h1>Shop Our <span>Merch</span></h1>
+  <div class="grid">
+    <div class="card-merch" data-name="Bakerz Tote Bags" data-price="1100" data-rating="4.9"
+      data-image="assets/merch/bag.png" data-desc="Premium canvas tote bag with embroidered logo, washable and durable." data-material="Heavy cotton canvas, embroidered Bakerz Bite logo. Machine washable, air dry.">
+      <div class="img-box"><img src="assets/merch/bag.png" alt="Bakerz Tote Bags"></div>
+      <div class="info">
+        <div style="color:#a56b77; font-size:11px; font-weight:700;">Merchandise</div>
+        <h3>Bakerz Tote Bags</h3>
+        <div class="mb-2"><span class="stars">★★★★★</span> <span class="rating-number">(4.9)</span></div>
+        <div class="d-flex justify-content-between align-items-center merch-bottom">
+          <span class="price">Rs. 1100</span>
+          <button class="view-btn view-merch" data-bs-toggle="modal" data-bs-target="#merchProductModal">View</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-merch" data-name="BakerzBite Cap" data-price="1850" data-rating="5"
+      data-image="assets/merch/cap.png" data-desc="Top off your everyday look with the BakerzBite Cap, designed for comfort and casual style." data-material="Premium cotton fabric. Hand wash gently with cold water.">
+      <div class="img-box"><img src="assets/merch/cap.png" alt="Coffee Tumbler"></div>
+      <div class="info">
+        <div style="color:#a56b77; font-size:11px; font-weight:700;">Merchandise</div>
+        <h3>Bakerzbite Cap</h3>
+        <div class="mb-2"><span class="stars">★★★★★</span> <span class="rating-number">(5)</span></div>
+        <div class="d-flex justify-content-between align-items-center merch-bottom">
+          <span class="price">Rs. 1850</span>
+          <button class="view-btn view-merch" data-bs-toggle="modal" data-bs-target="#merchProductModal">View</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-merch" data-name="Bakerz Bite Mugs" data-price="1250" data-rating="5"
+      data-image="assets/merch/mug.png" data-desc="Stoneware mug for slow coffee mornings." data-material="Glazed stoneware with the Bakerz Bite logo. Dishwasher safe.">
+      <div class="img-box"><img src="assets/merch/mug.png" alt="Bakerz Bite Mugs"></div>
+      <div class="info">
+        <div style="color:#a56b77; font-size:11px; font-weight:700;">Merchandise</div>
+        <h3>Bakerz Bite Mugs</h3>
+        <div class="mb-2"><span class="stars">★★★★★</span> <span class="rating-number">(5)</span></div>
+        <div class="d-flex justify-content-between align-items-center merch-bottom">
+          <span class="price">Rs. 1250</span>
+          <button class="view-btn view-merch" data-bs-toggle="modal" data-bs-target="#merchProductModal">View</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-merch" data-name="Bakerzbite Apron" data-price="2450" data-rating="4.8"
+      data-image="assets/merch/apron.png" data-desc="Bake in style with the BakerzBite Apron, combining a classic burgundy finish with a practical, comfortable design." data-material="Durable cotton-blend fabric. Air dry or tumble dry on low heat.">
+      <div class="img-box"><img src="assets/merch/apron.png" alt="Wooden Trays"></div>
+      <div class="info">
+        <div style="color:#a56b77; font-size:11px; font-weight:700;">Merchandise</div>
+        <h3>Bakerzbite Apron</h3>
+        <div class="mb-2"><span class="stars">★★★★★</span> <span class="rating-number">(4.8)</span></div>
+        <div class="d-flex justify-content-between align-items-center merch-bottom">
+          <span class="price">Rs. 2450</span>
+          <button class="view-btn view-merch" data-bs-toggle="modal" data-bs-target="#merchProductModal">View</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="merchProductModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="row g-0">
+        <div class="col-md-5 modal-left">
+          <img id="merchModalImage" class="modal-product-img" src="" alt="Merchandise">
+        </div>
+        <div class="col-md-7">
+          <div class="modal-right">
+            <button type="button" class="btn-close float-end" data-bs-dismiss="modal"></button>
+            <span class="modal-category">Merchandise</span>
+            <h2 id="merchModalTitle" class="modal-title mt-2"></h2>
+            <div class="my-2">
+              <span class="stars">★★★★★</span>
+              <span id="merchModalRating"></span>
+            </div>
+            <h4 id="merchModalPrice" class="modal-price"></h4>
+            <p id="merchModalDesc" class="modal-description"></p>
+            <div class="ingredient-box mb-4">
+              <strong><i class="fa-solid fa-gem"></i> Material &amp; Care</strong>
+              <p id="merchModalMaterial" class="mb-0 mt-2"></p>
+            </div>
+            <button id="modalAddBtn" class="add-cart-btn">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="gallery-wrap">
+    <div class="gallery-head">
+      <h2>Our <span>Sweet</span> Collection</h2>
+      <p>crafted with love • baked fresh daily</p>
+    </div>
+    <div class="gallery">
+      <div class="card" data-name="Almond Danish" data-img="Products/Almond Danish.jpg">
+        <div class="img-box"><img src="assets/products/danish.png">
+          <div class="overlay"><span><i class="fa-solid fa-eye"></i> View</span></div>
+        </div>
+      </div>
+      <div class="card" data-name="Chocolate Brownie" data-img="Products/chocolate brownise.jpg">
+        <div class="img-box"><img src="assets/products/brownies.png">
+          <div class="overlay"><span><i class="fa-solid fa-eye"></i> View</span></div>
+        </div>
+      </div>
+      <div class="card" data-name="Chocolate Fudge Cake"
+        data-img="Products/Chocolate Fudge Cake - Rich Chocolate Cake with Decadent Chocolate Fudge Frosting.jpg">
+        <div class="img-box"><img
+            src="assets/products/chocolatefudgecake.png">
+          <div class="overlay"><span><i class="fa-solid fa-eye"></i> View</span></div>
+        </div>
+      </div>
+      <div class="card" data-name="Chocolate Chip Cookies" data-img="assets/products/chocolatechipcookies.png">
+        <div class="img-box"><img src="assets/products/chocolatechipcookies.png">
+          <div class="overlay"><span><i class="fa-solid fa-eye"></i> View</span></div>
+        </div>
+      </div>
+      <div class="card" data-name="Cinnamon Bun" data-img="Products/Cinnamon Bun.jpg">
+        <div class="img-box"><img src="assets/products/cinnanonbun.png">
+          <div class="overlay"><span><i class="fa-solid fa-eye"></i> View</span></div>
+        </div>
+      </div>
+      <div class="card" data-name="Classic Vanilla Dream" data-img="assets/products/vanillacake.png">
+        <div class="img-box"><img src="assets/products/vanillacake.png">
+          <div class="overlay"><span><i class="fa-solid fa-eye"></i> View</span></div>
+        </div>
+      </div>
+      <div class="card" data-name="Coquette Macarons" data-img="assets/products/macrons.png">
+        <div class="img-box"><img src="assets/products/macrons.png">
+          <div class="overlay"><span><i class="fa-solid fa-eye"></i> View</span></div>
+        </div>
+      </div>
+      <div class="card" data-name="Croissant" data-img="assets/products/croissant.png">
+        <div class="img-box"><img src="assets/products/croissant.png">
+          <div class="overlay"><span><i class="fa-solid fa-eye"></i> View</span></div>
+        </div>
+      </div>
+      <div class="card" data-name="Red Velvet Cake" data-img="assets/products/redvelvetcake.png">
+        <div class="img-box"><img src="assets/products/redvelvetcake.png">
+          <div class="overlay"><span><i class="fa-solid fa-eye"></i> View</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content gallery-modal-content">
+        <div class="gallery-modal-media">
+          <button type="button" class="btn-close gallery-modal-close" data-bs-dismiss="modal" aria-label="Close gallery image"></button>
+          <img id="galleryModalImage" src="" alt="" class="gallery-modal-image">
+        </div>
+        <div class="gallery-modal-caption">
+          <h4 id="galleryModalTitle"></h4>
+          <p class="mb-0">Freshly baked with love at Bakerz Bite <i class="fa-solid fa-heart" aria-hidden="true"></i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAIBA -->
+
+  <section class="kind-words">
+
+    <div class="heading">
+      <span>✣ KIND WORDS</span>
+      <h1>Our wall of smiles</h1>
+      <p>Real moments shared by the people we<br> bake for.</p>
+    </div>
+
+    <div class="little-smile">
+
+      <button class="smile-btn" onclick="openSmileNote()">
+        ✦ Take a little smile ♡
+      </button>
+
+    </div>
+
+
+
+    <div class="smile-overlay" id="smileNote">
+
+      <div class="smile-note">
+
+        <button class="close-note" onclick="closeSmileNote()">
+          ×
+        </button>
+
+        <div class="note-heart">♡</div>
+
+        <p class="note-title">A little note</p>
+
+        <h3>
+          “Sometimes, the smallest moments
+          become the sweetest memories.”
+        </h3>
+
+        <p class="note-bottom">
+          ♡ Keep smiling.
+        </p>
+
+        <span class="note-sparkle">✦</span>
+
+      </div>
+
+    </div>
+
+    <div class="reviews-layout">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="reviewForm">
+
+            <h2>Share your experience</h2>
+
+            <input type="text" id="name" placeholder="Customer name">
+            <input type="email" id="email" placeholder="Email address">
+
+            <h4>Your rating</h4>
+
+            <div class="rating" role="group" aria-label="Choose your rating">
+              <span role="button" tabindex="0" aria-label="1 star" aria-pressed="false" onclick="setRating(1)">★</span>
+              <span role="button" tabindex="0" aria-label="2 stars" aria-pressed="false" onclick="setRating(2)">★</span>
+              <span role="button" tabindex="0" aria-label="3 stars" aria-pressed="false" onclick="setRating(3)">★</span>
+              <span role="button" tabindex="0" aria-label="4 stars" aria-pressed="false" onclick="setRating(4)">★</span>
+              <span role="button" tabindex="0" aria-label="5 stars" aria-pressed="false" onclick="setRating(5)">★</span>
+            </div>
+
+            <textarea id="review" placeholder="Your review..."></textarea>
+
+            <button type="button" id="submitReviewBtn">Submit Review <i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div id="customAlert">
+            <div class="alert-box">
+              <div class="alert-icon">♡</div>
+              <h3 id="alertTitle">Oops!</h3>
+              <p id="alertMessage"></p>
+              <button onclick="closeAlert()">Okay ♡</button>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="col-md-6">
+          <div class="reviews">
+
+
+            <div class="top-cards">
+
+              <div class="review-card">
+                <div class="card-top">
+                  <div class="avatar">A</div>
+                  <div class="stars">★★★★★</div>
+                </div>
+
+                <p>
+                  “The strawberry cake was beautiful, balanced and
+                  incredibly fresh. Everyone asked where it was from!”
+                </p>
+
+                <hr>
+
+                <div class="customer">
+                  <b>Areeba Khan</b>
+                  <span>September 18, 2026</span>
+                </div>
+              </div>
+
+
+              <div class="review-card">
+                <div class="card-top">
+                  <div class="avatar">H</div>
+                  <div class="stars">★★★★★</div>
+                </div>
+
+                <p>
+                  “Their croissants are properly flaky and the cappuccino
+                  is consistently excellent. My weekend ritual.”
+                </p>
+
+                <hr>
+
+                <div class="customer">
+                  <b>Hamza Malik</b>
+                  <span>September 12, 2026</span>
+                </div>
+              </div>
+
+            </div>
+
+
+
+            <div class="review-card bottom-card">
+
+              <div class="card-top">
+                <div class="avatar">S</div>
+                <div class="stars">★★★★★</div>
+              </div>
+
+              <p>
+                “Thoughtful packaging, warm service and the Lotus
+                cheesecake is a must-try.”
+              </p>
+
+              <hr>
+
+              <div class="customer">
+                <b>Sara Ahmed</b>
+                <span>September 4, 2026</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+  <section class="good-to-know" id="faq">
+    <div class="container">
+      <div class="sweet-animation">
+
+        <div class="floating-hearts">
+          <span>♡</span>
+          <span>♡</span>
+          <span>♡</span>
+        </div>
+
+        <div class="cupcake"><i class="fa-solid fa-cake-candles" aria-hidden="true"></i></div>
+
+      </div>
+      <p id="good_to_know">
+        Good to Know</p>
+
+      <h1 id="Frequently">Frequently asked <br> questions
+      </h1>
+      <hr>
+
+      <div class="container my-5">
+
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>What are your bakery timings?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">We welcome you daily from 8:00 AM to 11:00 PM, including weekends and public
+            holidays.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Can I order a custom celebration cake?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">Yes, you can customize your cake for birthdays, weddings and special
+            occasions.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>What ingredients do you use?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">We use premium, fresh and high-quality ingredients with love.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Do you offer delivery?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">Yes, we offer delivery for your convenience in Karachi.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Can I purchase merchandise in-store?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">Yes. Our mugs, bags, glasses and trays are available in-store, subject to
+            availability.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Which payment methods do you accept?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">We accept cash, major debit and credit cards, and popular digital payment
+            methods.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>How do you guarantee freshness?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">Our bakers produce in small batches throughout the day. Every item follows
+            strict preparation and quality checks.</div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    </div>
+
+  </section>
+  <section class="contact-section" id="contact">
+
+    <div class="contact-left">
+
+      <p class="small-title">COME SAY HELLO</p>
+
+      <h1>
+        Let’s make<br>
+        something<br>
+        <em>sweet together.</em>
+      </h1>
+
+      <p class="contact-text">
+        Planning a celebration, placing an order or just craving a good coffee?
+        We would love to hear from you.
+      </p>
+
+      <div class="contact-detail">
+        <div class="circle-icon">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <span>info@bakerzbite.com</span>
+      </div>
+
+      <div class="contact-detail">
+        <div class="circle-icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <span>+92 XXX XXXXXXX</span>
+      </div>
+
+      <div class="contact-detail">
+        <div class="circle-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <span>Karachi, Pakistan</span>
+      </div>
+
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.5340499917274!2d67.0626887753001!3d24.98196294038498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb340e584b891c3%3A0x29b2cbc198ba2dbd!2sAptech%20Computer%20Education%20North%20Karachi%20Center!5e0!3m2!1sen!2s!4v1792211108331!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Bakerz Bite location map"></iframe>
+      </div>
+
+    </div>
+
+
+    <div class="message-box" id="messageForm">
+
+      <div class="msg-head">
+        <div class="msg-badge"><i class="fa-regular fa-paper-plane"></i></div>
+        <div>
+          <h2>Send us a message</h2>
+          <p>We usually reply within one business day.</p>
+        </div>
+      </div>
+
+      <form class="msg-form" onsubmit="return false;">
+
+        <div class="msg-row">
+          <label class="msg-field">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="messageName" placeholder="Your name">
+          </label>
+          <label class="msg-field">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" id="messageEmail" placeholder="Email address">
+          </label>
+        </div>
+
+        <label class="msg-field">
+          <i class="fa-solid fa-tag"></i>
+          <input type="text" id="messageSubject" placeholder="Subject">
+        </label>
+
+        <label class="msg-field msg-area">
+          <i class="fa-regular fa-comment-dots"></i>
+          <textarea id="messageText" placeholder="How can we help?"></textarea>
+        </label>
+
+        <button type="button" class="msg-send" onclick="sendMessage()">
+          Send Message <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+      </form>
+      <div id="messageAlert">
+        <div class="message-alert-box">
+          <div class="message-alert-icon">♡</div>
+
+          <h3 id="messageAlertTitle">Thank You!</h3>
+
+          <p id="messageAlertText"></p>
+
+          <button type="button" onclick="closeMessageAlert()">Okay ♡</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <footer class="footer">
+
+    <div class="footer-brand">
+
+      <div class="footer-logo">
+        <div class="footer-icon">
+          <img src="assets/logo-icon.png" alt="Bakerz Bite logo" class="footer-logo-img">
+          <div class="bb-logo"></div>
+        </div>
+
+
+        <div class="footer-title">
+          Bakerz <span>Bite</span>
+        </div>
+      </div>
+
+      <p>
+        Passionately baked with the finest ingredients,<br>
+        because every day deserves something sweet.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-regular fa-comment"></i></a>
+        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>Sitemap</h3>
+
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Products</a>
+      <a href="#">Merchandise</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>Explore</h3>
+
+      <a href="#">Offers</a>
+      <a href="#">Gallery</a>
+      <a href="#">FAQ</a>
+      <a href="#">Contact Us</a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>Our favourites</h3>
+
+      <a href="#">Celebration cakes</a>
+      <a href="#">Morning pastries</a>
+      <a href="#">Cookies & pies</a>
+      <a href="#">Café beverages</a>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>© 2026 Bakerz Bite. All Rights Reserved.</p>
+      <p id="smiles">Where Smiles Are Served Daily.</p>
+
+    </div>
+    <div class="date-time-bar">
+      <div class="date-time-track">
+
+        <span id="currentDate"></span>
+        <span class="ticker-star">✦</span>
+
+        <span id="currentTime"></span>
+        <span class="ticker-star">✦</span>
+
+        <span>⌖ KARACHI, PAKISTAN</span>
+        <span class="ticker-star">✦</span>
+
+        <span>BAKERZ BITE</span>
+        <span class="ticker-star">✦</span>
+
+        <span id="currentDate2"></span>
+        <span class="ticker-star">✦</span>
+
+        <span id="currentTime2"></span>
+        <span class="ticker-star">✦</span>
+
+        <span>⌖ KARACHI, PAKISTAN</span>
+        <span class="ticker-star">✦</span>
+
+        <span>BAKERZ BITE</span>
+        <span class="ticker-star">✦</span>
+
+      </div>
+    </div>
+  </footer>
+
+  <div id="orderPopup" role="dialog" aria-modal="true" aria-labelledby="orderPopupTitle">
+    <div class="order-popup-box">
+      <div class="order-popup-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <h3 id="orderPopupTitle">Order Confirmed!</h3>
+      <p id="orderPopupName" class="order-popup-name"></p>
+      <div class="order-popup-details">
+        <div><span>Order no.</span><strong id="orderPopupNo"></strong></div>
+        <div><span>Items</span><strong id="orderPopupItems"></strong></div>
+        <div><span>Total</span><strong id="orderPopupTotal"></strong></div>
+      </div>
+      <p class="order-popup-note">Demo checkout: no payment was taken and nothing was sent to a server.</p>
+      <button type="button" id="orderPopupClose">Continue Shopping ♡</button>
+    </div>
+  </div>
+
+  <!-- Checkout form: front-end demo flow (no payment is processed or order sent to a server). -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content checkout-modal-content">
+        <div class="modal-header checkout-header">
+          <div>
+            <p class="checkout-eyebrow mb-1">BAKERZ BITE</p>
+            <h2 class="modal-title fs-4" id="checkoutModalTitle">Complete your order</h2>
+            <p class="mb-0 checkout-subtitle">A few details, then your treats are on their way.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close checkout"></button>
+        </div>
+        <div class="modal-body">
+          <div class="checkout-summary mb-4">
+            <h3 class="h6">Order summary</h3>
+            <div id="checkoutItems" class="checkout-items"></div>
+            <div class="checkout-total-row"><span>Subtotal</span><strong id="checkoutSubtotal">Rs. 0</strong></div>
+            <div class="checkout-total-row"><span>Delivery</span><strong id="checkoutDelivery">Rs. 200</strong></div>
+            <div class="checkout-total-row checkout-grand-total"><span>Total</span><strong id="checkoutTotal">Rs. 200</strong></div>
+          </div>
+
+          <form id="checkoutForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="checkoutName" class="form-label">Full name *</label>
+                <input id="checkoutName" name="fullName" class="form-control" type="text" autocomplete="name" required minlength="2" placeholder="Your full name">
+                <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="checkoutEmail" class="form-label">Email address *</label>
+                <input id="checkoutEmail" name="email" class="form-control" type="email" autocomplete="email" required placeholder="you@example.com">
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="checkoutPhone" class="form-label">Phone number *</label>
+                <input id="checkoutPhone" name="phone" class="form-control" type="tel" autocomplete="tel" required minlength="7" placeholder="+92 3XX XXXXXXX">
+                <div class="invalid-feedback">Please enter a reachable phone number.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="checkoutCity" class="form-label">City *</label>
+                <input id="checkoutCity" name="city" class="form-control" type="text" autocomplete="address-level2" required placeholder="Your city">
+                <div class="invalid-feedback">Please enter your city.</div>
+              </div>
+              <div class="col-12">
+                <label for="checkoutAddress" class="form-label">Delivery address *</label>
+                <input id="checkoutAddress" name="address" class="form-control" type="text" autocomplete="street-address" required minlength="8" placeholder="House / building, street, area">
+                <div class="invalid-feedback">Please enter your complete delivery address.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="checkoutPostal" class="form-label">Postal code (optional)</label>
+                <input id="checkoutPostal" name="postalCode" class="form-control" type="text" autocomplete="postal-code" inputmode="numeric" placeholder="Postal code">
+              </div>
+              <div class="col-md-6">
+                <label for="checkoutPayment" class="form-label">Payment method *</label>
+                <select id="checkoutPayment" name="paymentMethod" class="form-select" required>
+                  <option value="" selected disabled>Select payment method</option>
+                  <option value="Cash on Delivery">Cash on Delivery</option>
+                  <option value="Bank Transfer on Delivery">Bank transfer (confirm separately)</option>
+                </select>
+                <div class="invalid-feedback">Please select a payment method.</div>
+              </div>
+              <div class="col-12">
+                <label for="checkoutNotes" class="form-label">Delivery instructions (optional)</label>
+                <textarea id="checkoutNotes" name="notes" class="form-control" rows="2" placeholder="Landmark, preferred delivery time, or other notes"></textarea>
+              </div>
+              <div class="col-12">
+                <div class="checkout-demo-note"><i class="fa-solid fa-shield-heart me-2"></i>This demo checkout does not charge you or send your details to a server.</div>
+              </div>
+              <div class="col-12 d-flex flex-column flex-sm-row gap-2 justify-content-end">
+                <button type="button" class="btn checkout-cancel" data-bs-dismiss="modal">Continue shopping</button>
+                <button type="submit" class="btn checkout-submit"><i class="fa-solid fa-bag-shopping me-2"></i>Place demo order</button>
+              </div>
+            </div>
+          </form>
+          <div id="checkoutSuccess" class="checkout-success mt-3" role="status" aria-live="polite" hidden></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="jquery.js"></script>
+  <script>
+   
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const validTheme = value => value === 'light' ? 'light' : 'dark';
+
+      function applyTheme(theme, persist) {
+        theme = validTheme(theme);
+        root.classList.add('theme-switching');
+        root.setAttribute('data-bs-theme', theme);
+        root.style.colorScheme = theme;
+        if (toggle) {
+          const nextTheme = theme === 'dark' ? 'light' : 'dark';
+          toggle.setAttribute('aria-label', 'Switch to ' + nextTheme + ' theme');
+          toggle.setAttribute('title', 'Switch to ' + nextTheme + ' theme');
+          toggle.setAttribute('aria-pressed', String(theme === 'light'));
+        }
+        if (persist) {
+          try { localStorage.setItem('theme', theme); } catch (e) { /* storage may be disabled */ }
+        }
+        window.setTimeout(() => root.classList.remove('theme-switching'), 400);
+      }
+
+      let initialTheme = 'dark';
+      try { initialTheme = validTheme(localStorage.getItem('theme')); } catch (e) {}
+      applyTheme(initialTheme, false);
+
+      if (toggle) {
+        toggle.addEventListener('click', function () {
+          const current = root.getAttribute('data-bs-theme') === 'light' ? 'light' : 'dark';
+          applyTheme(current === 'dark' ? 'light' : 'dark', true);
+        });
+      }
+    })();
+  </script>
+
+  <script>
+
+
+    // AISHA
+
+    function updateDateTime() {
+
+      const now = new Date();
+
+      const time = now.toLocaleTimeString("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+      });
+
+      $("#currentTime").text(time);
+
+
+
+      const date = now.toLocaleDateString("en-US", {
+        weekday: "long",
+        month: "short",
+        day: "numeric",
+        year: "numeric"
+      });
+
+      $("#currentDate").text(date);
+
+    }
+
+
+    updateDateTime();
+
+
+    setInterval(updateDateTime, 1000);
+
+    let visitorTarget = 1281;
+    let visitorCurrent = 0;
+
+    function animateVisitors() {
+
+      visitorCurrent += Math.ceil(visitorTarget / 60);
+
+      if (visitorCurrent >= visitorTarget) {
+        visitorCurrent = visitorTarget;
+      }
+
+      $("#visitorNumber").text(
+        visitorCurrent.toLocaleString()
+      );
+
+      if (visitorCurrent < visitorTarget) {
+        requestAnimationFrame(animateVisitors);
+      }
+
+    }
+
+    animateVisitors();
+
+
+
+
+    // MARIHA
+
+
+
+
+    $(document).ready(function () {
+
+
+
+
+      let selectedCategory = "All";
+
+      let cart = [];
+
+      let selectedProduct = null;
+
+
+      function updateSlider() {
+
+        let slider = $("#priceRange")[0];
+
+        let value = slider.value;
+
+        let min = slider.min;
+
+        let max = slider.max;
+
+        let percentage =
+          ((value - min) / (max - min)) * 100;
+
+
+        $("#priceRange").css(
+          "background",
+          "linear-gradient(to right, #C98F9B "
+          + percentage +
+          "%, #ffffff "
+          + percentage +
+          "%)"
+        );
+
+      }
+
+
+      updateSlider();
+
+
+      $("#priceRange").on("input", function () {
+
+        $("#priceValue").text($(this).val());
+
+        updateSlider();
+
+        filterProducts();
+
+      });
+
+
+
+      $(".category-btn").click(function () {
+
+        $(".category-btn").removeClass("active");
+
+        $(this).addClass("active");
+
+        selectedCategory =
+          $(this).data("category");
+
+        filterProducts();
+
+      });
+
+
+
+      $("#searchInput").on("keyup", function () {
+
+        filterProducts();
+
+      });
+
+
+      $("#ratingFilter").change(function () {
+
+        filterProducts();
+
+      });
+
+
+
+
+      function filterProducts() {
+
+        let search =
+          $("#searchInput").val().toLowerCase();
+
+        let maxPrice =
+          parseInt($("#priceRange").val());
+
+        let rating =
+          parseFloat($("#ratingFilter").val());
+
+        let count = 0;
+
+
+        $(".product-item").each(function () {
+
+          let product = $(this);
+
+          let category =
+            product.data("category");
+
+          let price =
+            parseInt(product.data("price"));
+
+          let productRating =
+            parseFloat(product.data("rating"));
+
+          let name =
+            product.data("name").toLowerCase();
+
+
+          let categoryMatch =
+            selectedCategory === "All" ||
+            category === selectedCategory;
+
+
+          let searchMatch =
+            name.includes(search);
+
+
+          let priceMatch =
+            price <= maxPrice;
+
+
+          let ratingMatch =
+            productRating >= rating;
+
+
+          if (
+            categoryMatch &&
+            searchMatch &&
+            priceMatch &&
+            ratingMatch
+          ) {
+
+            product.show();
+
+            count++;
+
+          } else {
+
+            product.hide();
+
+          }
+
+        });
+
+
+        $("#resultCount").text(
+          count + " products"
+        );
+
+
+        if (count === 0) {
+
+          $("#noProducts").show();
+
+        } else {
+
+          $("#noProducts").hide();
+
+        }
+
+      }
+
+
+
+      $(".view-product").click(function () {
+
+        let product =
+          $(this).closest(".product-item");
+
+
+        let image =
+          product.find(".product-img").attr("src");
+
+        let title =
+          product.data("name");
+
+        let category =
+          product.data("category");
+
+        let price =
+          product.data("price");
+
+        let rating =
+          product.data("rating");
+
+
+        selectedProduct = {
+
+          name: title,
+
+          category: category,
+
+          price: price,
+
+          rating: rating,
+
+          image: image
+
+        };
+
+
+        $("#modalImage").attr("src", image);
+
+        $("#modalImage").attr("alt", title);
+
+        $("#modalTitle").text(title);
+
+        $("#modalCategory").text(category);
+
+        $("#modalPrice").text(
+          "Rs. " + price
+        );
+
+        $("#modalRating").text(
+          "(" + rating + ")"
+        );
+
+
+        if (category === "Cakes") {
+
+          $("#modalDescription").text(
+            "A soft and delicious freshly baked cake prepared with rich cream and premium ingredients."
+          );
+
+          $("#modalIngredients").text(
+            "Fresh cream, premium flour, butter, sugar and quality ingredients."
+          );
+
+        }
+
+        else if (category === "Pastries") {
+
+          $("#modalDescription").text(
+            "A freshly baked pastry with a light texture and delicious buttery flavour."
+          );
+
+          $("#modalIngredients").text(
+            "Premium flour, butter, sugar and fresh bakery ingredients."
+          );
+
+        }
+
+        else if (category === "Cookies") {
+
+          $("#modalDescription").text(
+            "Crispy, delicious and freshly baked cookies perfect for a sweet little treat."
+          );
+
+          $("#modalIngredients").text(
+            "Flour, butter, sugar, chocolate and fresh ingredients."
+          );
+
+        }
+
+        else {
+
+          $("#modalDescription").text(
+            "A delicious dessert freshly prepared by Bakerz Bite with love."
+          );
+
+          $("#modalIngredients").text(
+            "Premium ingredients, fresh cream, sugar and quality bakery ingredients."
+          );
+
+        }
+
+      });
+
+
+
+      $("#modalCartBtn").click(function () {
+
+        if (selectedProduct === null) {
+          return;
+        }
+
+
+        addToCart(selectedProduct);
+
+
+        $(this).html(
+          '<i class="fa-solid fa-check"></i> Added to Cart'
+        );
+
+
+        setTimeout(function () {
+
+          $("#modalCartBtn").html(
+            '<i class="fa-solid fa-cart-plus"></i> Add to Cart'
+          );
+
+        }, 1000);
+
+      });
+
+
+
+      function addToCart(product) {
+
+        let existingProduct =
+          cart.find(function (item) {
+
+            return item.name === product.name;
+
+          });
+
+
+        if (existingProduct) {
+
+          existingProduct.quantity++;
+
+        } else {
+
+          cart.push({
+
+            name: product.name,
+
+            price: parseInt(product.price),
+
+            image: product.image,
+
+            quantity: 1
+
+          });
+
+        }
+
+
+        updateCart();
+
+      }
+
+      
+      window.bbAddToCart = function (product) { addToCart(product); };
+      window.bbGetCart = function () { return cart; };
+      window.bbRefreshCart = function () { updateCart(); };
+
+      function updateCart() {
+
+        let totalItems = 0;
+
+        let totalPrice = 0;
+
+
+        $("#cartItems").html("");
+
+
+        if (cart.length === 0) {
+
+          $("#cartItems").html(`
+
+                <div class="empty-cart">
+
+                    <i class="fa-solid fa-basket-shopping fa-3x mb-3"></i>
+
+                    <h5>
+                        Your cart is empty
+                    </h5>
+
+                    <p>
+                        Add something delicious! <i class="fa-solid fa-cake-candles ms-1" aria-hidden="true"></i>
+                    </p>
+
+                </div>
+
+            `);
+
+
+          $("#cartBottom").hide();
+
+        }
+
+        else {
+
+          $("#cartBottom").show();
+
+
+          cart.forEach(function (item, index) {
+
+            totalItems += item.quantity;
+
+            totalPrice +=
+              item.price * item.quantity;
+
+
+            $("#cartItems").append(`
+
+                    <div class="cart-item">
+
+                        <div class="d-flex gap-3">
+
+                            <img
+                                src="${item.image}"
+                                class="cart-item-img"
+                                alt="${item.name}"
+                            >
+
+
+                            <div class="flex-grow-1">
+
+                                <div class="d-flex justify-content-between">
+
+                                    <span class="cart-item-title">
+                                        ${item.name}
+                                    </span>
+
+                                    <button
+                                        class="remove-btn remove-item"
+                                        data-index="${index}">
+
+                                        <i class="fa-solid fa-trash"></i>
+
+                                    </button>
+
+                                </div>
+
+
+                                <div class="cart-item-price mt-1">
+
+                                    Rs. ${item.price}
+
+                                </div>
+
+
+                                <div class="mt-2">
+
+                                    <button
+                                        class="quantity-btn decrease"
+                                        data-index="${index}">
+
+                                        −
+
+                                    </button>
+
+
+                                    <span class="quantity-number">
+
+                                        ${item.quantity}
+
+                                    </span>
+
+
+                                    <button
+                                        class="quantity-btn increase"
+                                        data-index="${index}">
+
+                                        +
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                `);
+
+          });
+
+        }
+
+
+        $("#cartCount").text(totalItems);
+
+        $("#cartTotal").text(
+          "Rs. " + totalPrice
+        );
+
+      }
+
+
+      $(document).on("click", ".increase", function () {
+
+        let index =
+          $(this).data("index");
+
+        cart[index].quantity++;
+
+        updateCart();
+
+      });
+
+
+
+      $(document).on("click", ".decrease", function () {
+
+        let index =
+          $(this).data("index");
+
+
+        if (cart[index].quantity > 1) {
+
+          cart[index].quantity--;
+
+        } else {
+
+          cart.splice(index, 1);
+
+        }
+
+
+        updateCart();
+
+      });
+
+
+
+      $(document).on("click", ".remove-item", function () {
+
+        let index =
+          $(this).data("index");
+
+        cart.splice(index, 1);
+
+        updateCart();
+
+      });
+
+
+    });
+
+
+    function openSmileNote() {
+      document.getElementById("smileNote").classList.add("active");
+    }
+
+    function closeSmileNote() {
+      document.getElementById("smileNote").classList.remove("active");
+    }
+    function showAlert(title, message) {
+      document.getElementById("alertTitle").innerText = title;
+      document.getElementById("alertMessage").innerText = message;
+      document.getElementById("customAlert").style.display = "flex";
+    }
+
+    function closeAlert() {
+      document.getElementById("customAlert").style.display = "none";
+    }
+    document.getElementById("customAlert").addEventListener("click", function (e) {
+      if (e.target === this) closeAlert();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeAlert();
+    });
+
+
+    function showMessageAlert(title, message) {
+
+      document.getElementById("messageAlertTitle").innerText = title;
+
+      document.getElementById("messageAlertText").innerText = message;
+
+      document.getElementById("messageAlert").style.display = "flex";
+    }
+
+
+    function closeMessageAlert() {
+
+      document.getElementById("messageAlert").style.display = "none";
+
+    }
+
+
+    function sendMessage() {
+
+      let name = document.getElementById("messageName").value.trim();
+
+      let email = document.getElementById("messageEmail").value.trim();
+
+      let subject = document.getElementById("messageSubject").value.trim();
+
+      let message = document.getElementById("messageText").value.trim();
+
+
+      if (name === "" || email === "" || subject === "" || message === "") {
+
+        showMessageAlert(
+          "Oops!",
+          "All fields must be filled."
+        );
+
+        return;
+      }
+
+
+      if (!email.includes("@") || !email.includes(".")) {
+
+        showMessageAlert(
+          "Invalid Email",
+          "Please enter a valid email address."
+        );
+
+        return;
+      }
+
+
+      showMessageAlert(
+        "Message Sent! ♡",
+        "Your message has been sent successfully. We’ll be in touch shortly."
+      );
+
+
+      document.getElementById("messageName").value = "";
+      document.getElementById("messageEmail").value = "";
+      document.getElementById("messageSubject").value = "";
+      document.getElementById("messageText").value = "";
+
+    }
+
+
+
+    function updateDateTime() {
+
+      let now = new Date();
+
+      let date = now.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+      });
+
+      let time = now.toLocaleTimeString("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+        second: "2-digit"
+      });
+
+      document.getElementById("currentDate").textContent = date;
+      document.getElementById("currentTime").textContent = time;
+
+      document.getElementById("currentDate2").textContent = date;
+      document.getElementById("currentTime2").textContent = time;
+    }
+
+    updateDateTime();
+
+    setInterval(updateDateTime, 1000);
+
+
+
+    // HASNAIN
+
+    // Gallery modal: scope the handler to gallery cards so product/merch cards
+    // keep their existing behaviour. Use the rendered thumbnail as the source.
+    $(document).on("click", "#gallery-wrap .gallery > .card", function () {
+      const card = $(this);
+      const image = card.find(".img-box img").first();
+      const imageSrc = image.attr("src");
+      const imageAlt = image.attr("alt") || card.data("name") || "Bakerz Bite gallery image";
+
+      if (!imageSrc) return;
+
+      $("#galleryModalImage").attr({ src: imageSrc, alt: imageAlt });
+      $("#galleryModalTitle").text(card.data("name") || imageAlt);
+      bootstrap.Modal.getOrCreateInstance(document.getElementById("galleryModal")).show();
+    });
+
+    // Clear the large image after the fade-out to avoid stale content on reopen.
+    $("#galleryModal").on("hidden.bs.modal", function () {
+      $("#galleryModalImage").attr({ src: "", alt: "" });
+      $("#galleryModalTitle").text("");
+    });
+
+    let selectedMerchProduct = null;
+    $(document).on("click", ".view-merch", function () {
+      const card = $(this).closest(".card-merch");
+      selectedMerchProduct = {
+        name: card.data("name"),
+        price: card.data("price"),
+        image: card.data("image"),
+        desc: card.data("desc") || ""
+      };
+      $("#merchModalImage").attr({ src: selectedMerchProduct.image, alt: selectedMerchProduct.name });
+      $("#merchModalTitle").text(selectedMerchProduct.name);
+      $("#merchModalRating").text("(" + card.data("rating") + ")");
+      $("#merchModalPrice").text("Rs. " + selectedMerchProduct.price);
+      $("#merchModalDesc").text(selectedMerchProduct.desc);
+      $("#merchModalMaterial").text(card.data("material") || "");
+    });
+    $("#modalAddBtn").off("click.bbMerch").on("click.bbMerch", function () {
+      if (!selectedMerchProduct || typeof window.bbAddToCart !== "function") return;
+      window.bbAddToCart(selectedMerchProduct);
+      $(this).html('<i class="fa-solid fa-check"></i> Added to Cart');
+      window.setTimeout(function () {
+        $("#modalAddBtn").html('<i class="fa-solid fa-cart-plus"></i> Add to Cart');
+      }, 1000);
+    });
+
+    
+      // AISHA
+
+
+      $(document).ready(function () {
+
+
+        $(".navbar .nav-link").on("click", function (e) {
+
+          e.preventDefault();
+
+          let target = $(this).attr("href");
+
+
+          if (!target || target === "#") {
+            return;
+          }
+
+          if ($(target).length) {
+
+            let navbarHeight = $(".navbar").outerHeight();
+
+            let targetPosition =
+              $(target).offset().top - navbarHeight;
+
+
+            $("html, body").animate({
+              scrollTop: targetPosition
+            }, 200);
+
+            $(".navbar .nav-link").removeClass("active");
+            $(".navbar .nav-link").removeAttr("aria-current");
+
+            $(this)
+              .addClass("active")
+              .attr("aria-current", "page");
+
+            $(".navbar-collapse").removeClass("show");
+          }
+
+        });
+
+
+        $(window).on("scroll", function () {
+
+          let scrollPosition =
+            $(window).scrollTop() +
+            $(".navbar").outerHeight() +
+            150;
+
+          let currentSection = null;
+
+          $(".navbar .nav-link").each(function () {
+
+            let target = $(this).attr("href");
+
+            if (!target || target === "#") {
+              return;
+            }
+
+            if ($(target).length) {
+
+              let sectionTop = $(target).offset().top;
+
+              if (scrollPosition >= sectionTop) {
+                currentSection = target;
+              }
+
+            }
+
+          });
+
+          if (currentSection) {
+
+            $(".navbar .nav-link").removeClass("active");
+            $(".navbar .nav-link").removeAttr("aria-current");
+
+            $('.navbar .nav-link[href="' + currentSection + '"]')
+              .addClass("active")
+              .attr("aria-current", "page");
+          }
+
+        });
+
+      });
+
+  </script>
+
+<script>
+
+(function () {
+  "use strict";
+  let selectedRating = 0;
+
+  function paintRating(value) {
+    document.querySelectorAll('.rating span').forEach(function (star, index) {
+      const active = index < value;
+      star.classList.toggle('selected', active);
+      star.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+  }
+
+  window.setRating = function (value) {
+    selectedRating = Math.max(0, Math.min(5, Number(value) || 0));
+    paintRating(selectedRating);
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+   
+    document.querySelectorAll('.faq-question').forEach(function (question) {
+      function toggleFaq() {
+        const item = question.closest('.faq-item');
+        const shouldOpen = !item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function (other) {
+          other.classList.remove('active');
+          const q = other.querySelector('.faq-question');
+          if (q) q.setAttribute('aria-expanded', 'false');
+        });
+        if (shouldOpen) {
+          item.classList.add('active');
+          question.setAttribute('aria-expanded', 'true');
+        }
+      }
+      question.addEventListener('click', toggleFaq);
+      question.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          toggleFaq();
+        }
+      });
+    });
+
+    document.querySelectorAll('.rating span').forEach(function (star, index) {
+      star.addEventListener('mouseenter', function () { paintRating(index + 1); });
+      star.addEventListener('focus', function () { paintRating(index + 1); });
+      star.addEventListener('mouseleave', function () { paintRating(selectedRating); });
+      star.addEventListener('blur', function () { paintRating(selectedRating); });
+      star.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          window.setRating(index + 1);
+        }
+      });
+    });
+
+   
+    const submitReview = document.getElementById('submitReviewBtn');
+    if (submitReview) {
+      submitReview.addEventListener('click', function (event) {
+        event.preventDefault();
+        const nameEl = document.getElementById('name');
+        const emailEl = document.getElementById('email');
+        const reviewEl = document.getElementById('review');
+        if (!nameEl || !emailEl || !reviewEl) return;
+        const name = nameEl.value.trim();
+        const email = emailEl.value.trim();
+        const review = reviewEl.value.trim();
+        if (!name || !email || !review) {
+          if (typeof window.showAlert === 'function') window.showAlert('Almost there!', 'Please fill in your name, email, review, and choose a star rating.');
+          return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          if (typeof window.showAlert === 'function') window.showAlert('Invalid email', 'Please enter a valid email address.');
+          return;
+        }
+        if (!selectedRating) {
+          if (typeof window.showAlert === 'function') window.showAlert('Choose a rating', 'Please select between 1 and 5 stars.');
+          return;
+        }
+        const reviews = document.querySelector('.reviews');
+        if (reviews) {
+          const card = document.createElement('article');
+          card.className = 'review-card user-review';
+          const top = document.createElement('div'); top.className = 'card-top';
+          const avatar = document.createElement('div'); avatar.className = 'avatar'; avatar.textContent = name.charAt(0).toUpperCase();
+          const stars = document.createElement('div'); stars.className = 'stars'; stars.textContent = '★'.repeat(selectedRating) + '☆'.repeat(5 - selectedRating);
+          top.append(avatar, stars);
+          const paragraph = document.createElement('p'); paragraph.textContent = '“' + review + '”';
+          const rule = document.createElement('hr');
+          const customer = document.createElement('div'); customer.className = 'customer';
+          const customerName = document.createElement('b'); customerName.textContent = name;
+          const date = document.createElement('span'); date.textContent = new Date().toLocaleDateString();
+          customer.append(customerName, date); card.append(top, paragraph, rule, customer); reviews.prepend(card);
+        }
+        nameEl.value = ''; emailEl.value = ''; reviewEl.value = ''; window.setRating(0);
+        if (typeof window.showAlert === 'function') window.showAlert('Thank You! ♡', 'Your review has been added successfully.');
+      }, true);
+    }
+
+    
+    const contactButton = document.querySelector('.message-box form button');
+    if (contactButton) contactButton.type = 'button';
+  });
+})();
+
+</script>
+<script>
+(function(){
+  const DELIVERY_FEE = 200;
+  function money(n){ return 'Rs. ' + Number(n||0).toLocaleString('en-PK'); }
+  function getCart(){ return typeof window.bbGetCart === 'function' ? window.bbGetCart() : []; }
+  function renderSummary(){
+    const cart=getCart(), host=document.getElementById('checkoutItems'); if(!host) return;
+    host.replaceChildren(); let subtotal=0;
+    cart.forEach(item=>{ const line=Number(item.price)*Number(item.quantity); subtotal+=line;
+      const row=document.createElement('div'); row.className='checkout-item-row';
+      const name=document.createElement('span'); name.textContent=item.name+' × '+item.quantity;
+      const price=document.createElement('strong'); price.textContent=money(line); row.append(name,price); host.append(row);
+    });
+    document.getElementById('checkoutSubtotal').textContent=money(subtotal);
+    document.getElementById('checkoutDelivery').textContent=money(DELIVERY_FEE);
+    document.getElementById('checkoutTotal').textContent=money(subtotal+DELIVERY_FEE);
+  }
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.checkout-btn')) return;
+    const cart=getCart();
+    if(!cart.length){ if(typeof window.showAlert==='function') window.showAlert('Your cart is empty','Add something delicious before checking out.'); else alert('Your cart is empty. Add something delicious before checking out.'); return; }
+    renderSummary(); const form=document.getElementById('checkoutForm'); if(form){form.reset();form.classList.remove('was-validated');}
+    const success=document.getElementById('checkoutSuccess'); if(success){success.hidden=true;success.textContent='';}
+    bootstrap.Modal.getOrCreateInstance(document.getElementById('checkoutModal')).show();
+  });
+  document.addEventListener('submit',function(e){
+    if(e.target.id!=='checkoutForm') return; e.preventDefault(); const form=e.target; form.classList.add('was-validated');
+    if(!form.checkValidity()){form.querySelector(':invalid')?.focus();return;}
+    const cart=getCart(); if(!cart.length){bootstrap.Modal.getOrCreateInstance(document.getElementById('checkoutModal')).hide();return;}
+    const name=document.getElementById('checkoutName').value.trim();
+    const total=cart.reduce((sum,item)=>sum+Number(item.price)*Number(item.quantity),0)+DELIVERY_FEE;
+    const order='BB-'+Date.now().toString().slice(-7);
+    const itemCount=cart.reduce((n,i)=>n+Number(i.quantity),0);
+    cart.splice(0,cart.length); if(typeof window.bbRefreshCart==='function') window.bbRefreshCart(); form.reset(); form.classList.remove('was-validated');
+    const modalEl=document.getElementById('checkoutModal');
+    modalEl.addEventListener('hidden.bs.modal',function(){
+      document.getElementById('orderPopupName').textContent='Thank you, '+name+'! Your treats are being prepared.';
+      document.getElementById('orderPopupNo').textContent=order;
+      document.getElementById('orderPopupItems').textContent=itemCount;
+      document.getElementById('orderPopupTotal').textContent=money(total);
+      document.getElementById('orderPopup').style.display='flex';
+    },{once:true});
+    bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+  });
+  (function(){
+    const pop=document.getElementById('orderPopup'), btn=document.getElementById('orderPopupClose');
+    if(!pop||!btn) return;
+    const close=()=>{pop.style.display='none';};
+    btn.addEventListener('click',close);
+    pop.addEventListener('click',e=>{if(e.target===pop) close();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape') close();});
+  })();
+})();
+</script>
+  <script src="chatbot.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+/* ==========================================================
+   Bakerz Bite - "Bite Buddy" chat assistant
+   Theme-aware: follows html[data-bs-theme] (dark = default)
+   Everything is prefixed bb- so it cannot clash with site CSS.
+   ========================================================== */
+
+#bbChat {
+  --bb-panel: #250d14;
+  --bb-surface: #2d1119;
+  --bb-bot: #2d1119;
+  --bb-bot-text: #f8e9e8;
+  --bb-muted: #cdb6b7;
+  --bb-line: #5b2531;
+  --bb-accent: #b73550;
+  --bb-accent-strong: #8f1d35;
+  --bb-user: #b73550;
+  --bb-user-text: #ffffff;
+  --bb-chip: #f0c2c9;
+  --bb-chip-hover: #5b1728;
+  --bb-input: #16070b;
+  --bb-shadow: 0 18px 48px rgba(0, 0, 0, .45);
+  --bb-gap: 16px;
+  font-family: "DM Sans", "Google Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--bb-bot-text);
+}
+
+html[data-bs-theme="light"] #bbChat {
+  --bb-panel: #f5e8e4;
+  --bb-surface: #fbf3f0;
+  --bb-bot: #fffaf7;
+  --bb-bot-text: #32171d;
+  --bb-muted: #6f565b;
+  --bb-line: #dcc0c3;
+  --bb-accent: #8f1d35;
+  --bb-accent-strong: #7f2335;
+  --bb-user: #8f1d35;
+  --bb-user-text: #ffffff;
+  --bb-chip: #7f2335;
+  --bb-chip-hover: #ecd3d0;
+  --bb-input: #ffffff;
+  --bb-shadow: 0 18px 48px rgba(75, 23, 33, .22);
+}
+
+#bbChat *, #bbChat *::before, #bbChat *::after { box-sizing: border-box; }
+#bbChat button, #bbChat input { font-family: inherit; font-size: inherit; margin: 0; }
+#bbChat p, #bbChat ul { margin: 0; padding: 0; }
+
+/* ---------- floating button ---------- */
+#bbChat .bb-fab {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 1035;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 56px;
+  padding: 0 20px 0 16px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 999px;
+  background: var(--bb-accent-strong);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: .2px;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(143, 29, 53, .45);
+  transition: transform .2s ease, background .2s ease;
+}
+#bbChat .bb-fab:hover { background: var(--bb-accent); transform: translateY(-2px); }
+#bbChat .bb-fab:focus-visible, #bbChat button:focus-visible, #bbChat input:focus-visible {
+  outline: 2px solid #f0c2c9;
+  outline-offset: 2px;
+}
+#bbChat .bb-fab i { font-size: 20px; }
+
+/* tiny teaser bubble above the button */
+#bbChat .bb-teaser {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: calc(max(16px, env(safe-area-inset-bottom)) + 68px);
+  z-index: 1035;
+  max-width: min(260px, calc(100vw - 32px));
+  padding: 10px 34px 10px 14px;
+  border-radius: 16px 16px 4px 16px;
+  background: var(--bb-bot);
+  color: var(--bb-bot-text);
+  border: 1px solid var(--bb-line);
+  box-shadow: var(--bb-shadow);
+  cursor: pointer;
+  animation: bbPop .35s ease both;
+}
+#bbChat .bb-teaser[hidden] { display: none; }
+#bbChat .bb-teaser-x {
+  position: absolute; top: 4px; right: 6px;
+  width: 24px; height: 24px; border: 0; border-radius: 50%;
+  background: transparent; color: var(--bb-muted); cursor: pointer;
+}
+
+/* ---------- panel ---------- */
+#bbChat .bb-panel {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: calc(max(16px, env(safe-area-inset-bottom)) + 70px);
+  z-index: 1035;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  height: min(600px, calc(100vh - 110px));
+  height: min(600px, calc(100dvh - 110px));
+  background: var(--bb-panel);
+  border: 1px solid var(--bb-line);
+  border-radius: 22px;
+  box-shadow: var(--bb-shadow);
+  overflow: hidden;
+  transform-origin: bottom right;
+  animation: bbOpen .22s ease both;
+}
+#bbChat .bb-panel[hidden] { display: none; }
+
+#bbChat .bb-head {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 14px 14px 16px;
+  background: var(--bb-accent-strong);
+  color: #fff;
+}
+#bbChat .bb-avatar {
+  flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(255, 255, 255, .16); font-size: 18px;
+}
+#bbChat .bb-title { flex: 1; min-width: 0; }
+#bbChat .bb-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px; font-weight: 700; line-height: 1.2;
+}
+#bbChat .bb-name em { font-style: italic; opacity: .85; }
+#bbChat .bb-status { font-size: 12px; opacity: .85; display: flex; align-items: center; gap: 6px; }
+#bbChat .bb-dot { width: 8px; height: 8px; border-radius: 50%; background: #62d98b; }
+#bbChat .bb-iconbtn {
+  width: 34px; height: 34px; border: 0; border-radius: 50%;
+  background: rgba(255, 255, 255, .14); color: #fff; cursor: pointer;
+  transition: background .2s;
+}
+#bbChat .bb-iconbtn:hover { background: rgba(255, 255, 255, .28); }
+
+#bbChat .bb-msgs {
+  flex: 1; min-height: 0;
+  overflow-y: auto; overscroll-behavior: contain;
+  padding: 16px 14px 8px;
+  display: flex; flex-direction: column; gap: 10px;
+  scroll-behavior: smooth;
+}
+#bbChat .bb-row { display: flex; animation: bbIn .25s ease both; }
+#bbChat .bb-row.bb-me { justify-content: flex-end; }
+#bbChat .bb-bubble {
+  max-width: 88%;
+  padding: 10px 14px;
+  border-radius: 18px 18px 18px 4px;
+  background: var(--bb-bot);
+  color: var(--bb-bot-text);
+  border: 1px solid var(--bb-line);
+  overflow-wrap: anywhere;
+}
+#bbChat .bb-me .bb-bubble {
+  border-radius: 18px 18px 4px 18px;
+  background: var(--bb-user);
+  color: var(--bb-user-text);
+  border-color: transparent;
+}
+#bbChat .bb-bubble p + p, #bbChat .bb-bubble p + ul, #bbChat .bb-bubble ul + p { margin-top: 8px; }
+#bbChat .bb-bubble ul { list-style: none; display: grid; gap: 5px; }
+#bbChat .bb-bubble li { position: relative; padding-left: 16px; }
+#bbChat .bb-bubble li::before {
+  content: ""; position: absolute; left: 2px; top: .62em;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--bb-accent);
+}
+#bbChat .bb-bubble strong { font-weight: 700; }
+#bbChat .bb-small { font-size: 12px; color: var(--bb-muted); }
+
+/* product / merch cards inside chat */
+#bbChat .bb-cards { display: grid; gap: 8px; margin-top: 8px; }
+#bbChat .bb-card {
+  display: grid; grid-template-columns: 64px 1fr; gap: 10px; align-items: center;
+  padding: 8px; border-radius: 14px;
+  background: var(--bb-surface); border: 1px solid var(--bb-line);
+}
+#bbChat .bb-card img {
+  width: 64px; height: 64px; border-radius: 10px; object-fit: cover; background: var(--bb-input);
+}
+#bbChat .bb-card-name { font-weight: 700; line-height: 1.25; }
+#bbChat .bb-card-meta { font-size: 12px; color: var(--bb-muted); }
+#bbChat .bb-card-price { font-weight: 700; color: var(--bb-accent); }
+html:not([data-bs-theme="light"]) #bbChat .bb-card-price { color: #f0c2c9; }
+#bbChat .bb-card-actions { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+
+#bbChat .bb-btn {
+  padding: 5px 12px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--bb-accent); background: var(--bb-accent); color: #fff;
+  font-size: 12px; font-weight: 600; transition: background .2s, transform .2s;
+}
+#bbChat .bb-btn:hover { background: var(--bb-accent-strong); }
+#bbChat .bb-btn.bb-ghost { background: transparent; color: var(--bb-chip); border-color: var(--bb-line); }
+#bbChat .bb-btn.bb-ghost:hover { background: var(--bb-chip-hover); }
+#bbChat .bb-btn[disabled] { opacity: .7; cursor: default; }
+#bbChat .bb-btns { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+
+/* typing indicator */
+#bbChat .bb-typing { display: inline-flex; gap: 4px; padding: 4px 0; }
+#bbChat .bb-typing span {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--bb-muted);
+  animation: bbBlink 1.1s infinite ease-in-out;
+}
+#bbChat .bb-typing span:nth-child(2) { animation-delay: .15s; }
+#bbChat .bb-typing span:nth-child(3) { animation-delay: .3s; }
+
+/* quick replies */
+#bbChat .bb-chips {
+  display: flex; gap: 8px; padding: 8px 14px 10px;
+  overflow-x: auto; scrollbar-width: none; flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+#bbChat .bb-chips::-webkit-scrollbar { display: none; }
+#bbChat .bb-chip {
+  flex: 0 0 auto; white-space: nowrap;
+  padding: 7px 13px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--bb-line); background: transparent; color: var(--bb-chip);
+  font-size: 13px; transition: background .2s, border-color .2s;
+}
+#bbChat .bb-chip:hover { background: var(--bb-chip-hover); border-color: var(--bb-accent); }
+
+/* input */
+#bbChat .bb-form {
+  display: flex; gap: 8px; padding: 10px 12px 8px;
+  border-top: 1px solid var(--bb-line); background: var(--bb-panel);
+}
+#bbChat .bb-input {
+  flex: 1; min-width: 0; height: 44px; padding: 0 16px;
+  border-radius: 999px; border: 1px solid var(--bb-line);
+  background: var(--bb-input); color: var(--bb-bot-text);
+  font-size: 16px; /* 16px stops iOS zooming on focus */
+}
+#bbChat .bb-input::placeholder { color: var(--bb-muted); opacity: .8; }
+#bbChat .bb-send {
+  flex: 0 0 44px; width: 44px; height: 44px; border: 0; border-radius: 50%;
+  background: var(--bb-accent); color: #fff; cursor: pointer; transition: background .2s;
+}
+#bbChat .bb-send:hover { background: var(--bb-accent-strong); }
+#bbChat .bb-note { padding: 0 14px 10px; font-size: 11px; color: var(--bb-muted); text-align: center; }
+
+/* ---------- phones ---------- */
+@media (max-width: 575.98px) {
+  #bbChat .bb-fab { height: 52px; padding: 0 16px; }
+  #bbChat .bb-fab span { display: none; }       /* icon-only button on phones */
+  #bbChat .bb-panel {
+    left: 10px; right: 10px;
+    width: auto; max-width: none;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    height: min(82vh, 640px);
+    height: min(82dvh, 640px);
+    border-radius: 20px;
+  }
+  #bbChat[data-open="true"] .bb-fab { display: none; }  /* close lives in the header */
+  #bbChat .bb-bubble { max-width: 92%; }
+}
+@media (max-height: 480px) and (orientation: landscape) {
+  #bbChat .bb-panel { height: calc(100vh - 24px); height: calc(100dvh - 24px); bottom: 12px; }
+  #bbChat .bb-note { display: none; }
+}
+
+@keyframes bbOpen { from { opacity: 0; transform: translateY(12px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes bbIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes bbPop { from { opacity: 0; transform: translateY(8px) scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes bbBlink { 0%, 80%, 100% { opacity: .25; transform: scale(.8); } 40% { opacity: 1; transform: scale(1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  #bbChat *, #bbChat *::before, #bbChat *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

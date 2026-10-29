@@ -1,0 +1,1105 @@
+/* ==========================================================
+   THEME SWITCH (Dark / Light)
+   Dark = default (style.css). Light = overrides below.
+   Theme is set on <html data-bs-theme="dark|light"> by the toggle button.
+   ========================================================== */
+
+/* ---------- Toggle button ---------- */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-right: 14px;
+    border-radius: 50%;
+    border: 1px solid #e4c9ce;
+    background: #fffaf6;
+    color: #a94b5d;
+    font-size: 17px;
+    cursor: pointer;
+    transition: transform .3s ease, background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-3px) rotate(15deg);
+    box-shadow: 0 8px 18px rgba(191, 119, 64, 0.25);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid #a94b5d;
+    outline-offset: 3px;
+}
+
+/* dark mode shows the sun (click -> light), light mode shows the moon (click -> dark) */
+.theme-toggle .icon-moon { display: none; }
+html[data-bs-theme="light"] .theme-toggle .icon-sun { display: none; }
+html[data-bs-theme="light"] .theme-toggle .icon-moon { display: inline-block; }
+
+html[data-bs-theme="light"] .theme-toggle {
+    background: #fff8f2;
+    border-color: #e4c9ce;
+    color: #7f2335;
+}
+
+/* smooth colour fade only while switching */
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+    transition: background-color .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease !important;
+}
+
+/* ---------- Light theme variables ---------- */
+html[data-bs-theme="light"] {
+    --pink: #7f2335;
+    --dark: #32171d;
+    --bg: #fbf3ed;
+    --line: #e4c9ce;
+    --muted: #725b60;
+    --slider-track: #f3e1df;
+    color-scheme: light;
+}
+
+html[data-bs-theme="dark"] {
+    --slider-track: #ffffff;
+    color-scheme: dark;
+}
+
+/* ---------- Light theme overrides (auto-generated from style.css) ---------- */
+html[data-bs-theme="light"] body {
+  background: #fbf3ed;
+}
+
+html[data-bs-theme="light"] .hero {
+  --bk-bg0: #fff8f2;
+  --bk-bg1: #f3e1df;
+  --bk-bg2: #e4c9ce;
+  --bk-w1: #e4c9ce;
+  --bk-w2: #e4c9ce;
+  --bk-w3: #fbf3ed;
+  --bk-glow: .45;
+  --bk-badge: #fffaf6;
+  background: linear-gradient(135deg, #fbf3ed 0%, #E7DDD8 100%);
+}
+
+html[data-bs-theme="light"] .hero-bg {
+  background:
+    radial-gradient(55% 75% at 78% 45%, rgba(211, 152, 103, 0.28), transparent 70%),
+    radial-gradient(40% 60% at 8% 90%, rgba(175, 113, 71, 0.14), transparent 70%);
+}
+
+html[data-bs-theme="light"] .hero-wash {
+  background-image: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+}
+
+html[data-bs-theme="light"] .hero-orb.o1 { background: rgba(211, 152, 103, 0.35); }
+html[data-bs-theme="light"] .hero-orb.o2 { background: rgba(175, 113, 71, 0.22); }
+html[data-bs-theme="light"] .hero-orb.o3 { background: rgba(166, 102, 48, 0.20); }
+
+html[data-bs-theme="light"] .hero::before {
+  background: linear-gradient(90deg,
+
+            rgba(242,236,233,0.6) ,
+            rgba(175,113,71,0.4),
+            rgba(162,105,66,0));
+}
+
+html[data-bs-theme="light"] .hero::after {
+  background: rgba(238,231,227,0.56);
+}
+
+html[data-bs-theme="light"] .hero p:first-child {
+  color: #725b60;
+}
+
+html[data-bs-theme="light"] .hero h1 {
+  color: #32171d;
+}
+
+html[data-bs-theme="light"] .hero button a {
+  color: #ffffff;
+  border: 1px solid #e4c9ce;
+}
+
+html[data-bs-theme="light"] .hero button:nth-of-type(2) a {
+  color: #7f2335;
+  background: #fbf3ed;
+}
+
+html[data-bs-theme="light"] .hero button a:hover {
+  box-shadow: 0 12px 25px rgba(191,119,64,0.22);
+}
+
+html[data-bs-theme="light"] .hero button a::before {
+  background: linear-gradient(90deg,
+            transparent,
+            rgba(255,255,255,0.45),
+            transparent);
+}
+
+html[data-bs-theme="light"] .hero ul {
+  color: #32171d;
+}
+
+html[data-bs-theme="light"] .hero li::before {
+  color: #7f2335;
+}
+
+@media (max-width: 991px) {
+html[data-bs-theme="light"] .hero::before {
+  background: linear-gradient(90deg,
+                rgba(231,221,216,0.96),
+                rgba(231,221,216,0.75),
+                rgba(231,221,216,0.6));
+}
+}
+
+html[data-bs-theme="light"] .brand-title {
+  color: #32171d;
+}
+
+html[data-bs-theme="light"] .bite-word {
+  color: #32171d;
+}
+
+html[data-bs-theme="light"] .bite-word::after {
+  background: #f3e1df;
+  box-shadow: -5px 6px 0 -1px #e4c9ce,
+        -3px -5px 0 -1px #e4c9ce;
+}
+
+html[data-bs-theme="light"] nav {
+  background-color: #f3e1df;
+}
+
+html[data-bs-theme="light"] .logoname {
+  color: #32171d;
+}
+
+html[data-bs-theme="light"] .logoname2 {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .carticon a {
+  color: #4b1721;
+}
+
+html[data-bs-theme="light"] .carticon:hover i {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .navbar-nav .nav-link::after {
+  background: #7f2335;
+}
+
+html[data-bs-theme="light"] .navbar-nav .nav-link:hover {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .btmhero {
+  background: #f3e1df;
+  border: 1px solid #e4c9ce;
+  box-shadow: 0 8px 25px rgba(191,119,64,0.08);
+}
+
+html[data-bs-theme="light"] .visitor,
+html[data-bs-theme="light"] .time,
+html[data-bs-theme="light"] .date {
+  color: #32171d;
+}
+
+html[data-bs-theme="light"] .visitor,
+html[data-bs-theme="light"] .time {
+  border-right: 1px solid #e4c9ce;
+}
+
+html[data-bs-theme="light"] .visitor span,
+html[data-bs-theme="light"] .time span,
+html[data-bs-theme="light"] .date span {
+  color: #725b60;
+}
+
+html[data-bs-theme="light"] .visitor i,
+html[data-bs-theme="light"] .time i,
+html[data-bs-theme="light"] .date i {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .visitor em {
+  color: #4b1721;
+}
+
+html[data-bs-theme="light"] .visitor:hover em {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .time strong,
+html[data-bs-theme="light"] .date strong {
+  color: #4b1721;
+}
+
+html[data-bs-theme="light"] .visitor:hover,
+html[data-bs-theme="light"] .time:hover,
+html[data-bs-theme="light"] .date:hover {
+  background: #f3e1df;
+}
+
+html[data-bs-theme="light"] .about .container-fluid {
+  background-color: #f3e1df;
+  background-color: #f3e1df;
+}
+
+html[data-bs-theme="light"] .about .container-fluid::before {
+  background: rgba(238,231,227,0.55);
+}
+
+html[data-bs-theme="light"] .about img {
+  box-shadow: 15px 15px 0 #e4c9ce,
+        0 15px 35px rgba(196,176,184,0.12);
+}
+
+html[data-bs-theme="light"] .about img:hover {
+  box-shadow: 20px 20px 0 #e4c9ce,
+        0 20px 40px rgba(196,176,184,0.18);
+}
+
+html[data-bs-theme="light"] .about-label {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .about-label::after {
+  background: #7f2335;
+}
+
+html[data-bs-theme="light"] .about h2 {
+  color: #32171d;
+}
+
+html[data-bs-theme="light"] .about h5 {
+  color: #4b1721;
+}
+
+html[data-bs-theme="light"] .about p {
+  color: #32171d;
+}
+
+html[data-bs-theme="light"] .about-feature {
+  border-right: 1px solid #e4c9ce;
+}
+
+html[data-bs-theme="light"] .about-feature i {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .about-feature h6 {
+  color: #4b1721;
+}
+
+html[data-bs-theme="light"] .about-feature span {
+  color: #725b60;
+}
+
+html[data-bs-theme="light"] .about-feature:hover {
+  background: #f3e1df;
+}
+
+html[data-bs-theme="light"] .about-feature:hover i {
+  color: #7f2335;
+}
+
+@media (max-width: 991px) {
+html[data-bs-theme="light"] .about-feature {
+  border-bottom: 1px solid #e4c9ce;
+}
+}
+
+@media (max-width: 762px) {
+html[data-bs-theme="light"] .about-feature {
+  border-bottom: 1px solid #e4c9ce;
+}
+}
+
+html[data-bs-theme="light"] .cart {
+  color: #4b1721;
+  background-color: #f3e1df;
+}
+
+html[data-bs-theme="light"] .cart:hover {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] body {
+  background-color: #f3e1df;
+  color: #382c22;
+}
+
+html[data-bs-theme="light"] .products-heading h1 {
+  color: #594430;
+}
+
+html[data-bs-theme="light"] .products-heading p {
+  color: #614934;
+}
+
+html[data-bs-theme="light"] .filter-box {
+  background-color: #e3d7d2;
+  box-shadow: 0 5px 20px rgba(191,119,64,0.08);
+}
+
+html[data-bs-theme="light"] .filter-title {
+  color: #594430;
+}
+
+html[data-bs-theme="light"] .category-btn {
+  background-color: #e3d7d2;
+  color: #a66631;
+  border: 1px solid #7f2335;
+}
+
+html[data-bs-theme="light"] .category-btn:hover {
+  background-color: #7f2335;
+  color: #ffffff;
+}
+
+html[data-bs-theme="light"] .category-btn.active {
+  background-color: #7f2335;
+  color: #ffffff;
+}
+
+html[data-bs-theme="light"] .search-icon {
+  background-color: #f3e1df;
+  border-color: #d3c3ba;
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] #searchInput {
+  border-color: #d3c3ba;
+}
+
+html[data-bs-theme="light"] #searchInput:focus {
+  border-color: #7f2335;
+  box-shadow: 0 0 0 0.15rem rgba(191,119,64,0.15);
+}
+
+html[data-bs-theme="light"] #priceRange {
+  background: linear-gradient(to right,
+            #7f2335 100%,
+            #e3d7d2 100%);
+}
+
+html[data-bs-theme="light"] #priceRange::-webkit-slider-thumb {
+  background-color: #7f2335;
+  border: 3px solid #cbb8ae;
+  box-shadow: 0 1px 6px rgba(247,247,247,0.2);
+}
+
+html[data-bs-theme="light"] #priceRange::-moz-range-thumb {
+  background-color: #7f2335;
+  border: 3px solid #cbb8ae;
+  box-shadow: 0 1px 6px rgba(247,247,247,0.2);
+}
+
+html[data-bs-theme="light"] .price-text {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .product-card {
+  background-color: #e3d7d2;
+  box-shadow: 0 5px 20px rgba(191,119,64,0.08);
+}
+
+html[data-bs-theme="light"] .product-card:hover {
+  box-shadow: 0 12px 25px rgba(191,119,64,0.15);
+}
+
+html[data-bs-theme="light"] .product-category {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .product-title {
+  color: #403022;
+}
+
+html[data-bs-theme="light"] .stars {
+  color: #ba7e1c;
+}
+
+html[data-bs-theme="light"] .rating-number {
+  color: #725b60;
+}
+
+html[data-bs-theme="light"] .product-price {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .view-btn {
+  background-color: #7f2335;
+  color: #ffffff;
+}
+
+html[data-bs-theme="light"] .view-btn:hover {
+  background-color: #9a633f;
+  color: #ffffff;
+}
+
+html[data-bs-theme="light"] .modal-left {
+  background-color: #f3e1df;
+}
+
+html[data-bs-theme="light"] .modal-category {
+  color: #a66631;
+}
+
+html[data-bs-theme="light"] .modal-title {
+  color: #4a3928;
+}
+
+html[data-bs-theme="light"] .modal-price {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .modal-description {
+  color: #56412e;
+}
+
+html[data-bs-theme="light"] .ingredient-box {
+  background-color: #f3e1df;
+  color: #513d2b;
+}
+
+html[data-bs-theme="light"] .add-cart-btn {
+  background-color: #7f2335;
+  color: #ffffff;
+}
+
+html[data-bs-theme="light"] .add-cart-btn:hover {
+  background-color: #9a633f;
+  color: #ffffff;
+}
+
+html[data-bs-theme="light"] .offcanvas {
+  background-color: #f3e1df;
+}
+
+html[data-bs-theme="light"] .offcanvas-header {
+  background-color: #f3e1df;
+}
+
+html[data-bs-theme="light"] .offcanvas-title {
+  color: #594430;
+}
+
+html[data-bs-theme="light"] .cart-item {
+  background-color: #e3d7d2;
+}
+
+html[data-bs-theme="light"] .cart-item-title {
+  color: #463525;
+}
+
+html[data-bs-theme="light"] .cart-item-price {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .quantity-btn {
+  background-color: #f3e1df;
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .remove-btn {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .cart-total {
+  border-top: 1px solid #d3c3ba;
+}
+
+html[data-bs-theme="light"] .checkout-btn {
+  background-color: #7f2335;
+  color: #ffffff;
+}
+
+html[data-bs-theme="light"] .checkout-btn:hover {
+  background-color: #9a633f;
+  color: #ffffff;
+}
+
+html[data-bs-theme="light"] .empty-cart {
+  color: #a66631;
+}
+
+html[data-bs-theme="light"] #noProducts {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .lifestyle,
+html[data-bs-theme="light"] .offer {
+  background: #eaddd8;
+  color: #f3f0ec;
+}
+
+html[data-bs-theme="light"] .lifestyle p {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .lifestyle-img {
+  background: #ddd1cb;
+}
+
+html[data-bs-theme="light"] .card {
+  background: #e3d7d2;
+}
+
+html[data-bs-theme="light"] .card:hover {
+  box-shadow: 0 18px 35px rgba(191,119,64,0.2);
+}
+
+html[data-bs-theme="light"] .img-box {
+  background: #e7dcd7;
+}
+
+html[data-bs-theme="light"] .btn:hover {
+  color: #ffffff;
+}
+
+html[data-bs-theme="light"] #gallery-wrap {
+  background: #e5dad5;
+}
+
+html[data-bs-theme="light"] .gallery-head h2 {
+  color: #1d1712;
+}
+
+html[data-bs-theme="light"] .gallery-head p {
+  color: #725b60;
+}
+
+html[data-bs-theme="light"] .card {
+  background: #e3d7d2;
+  border: 1.5px solid #cfbeb5;
+}
+
+html[data-bs-theme="light"] .card:hover {
+  box-shadow: 0 20px 40px rgba(191,119,64,0.22);
+  border-color: #7f2335;
+}
+
+html[data-bs-theme="light"] .img-box {
+  background: #e7dcd7;
+}
+
+html[data-bs-theme="light"] .img-box::after {
+  background: linear-gradient(0deg, rgba(234,221,216,0.08), transparent 60%);
+}
+
+html[data-bs-theme="light"] .kind-words {
+  background-color: #f3e1df;
+}
+
+html[data-bs-theme="light"] .heading span {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .heading p {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .smile-btn {
+  color: #1b1510;
+}
+
+html[data-bs-theme="light"] .smile-btn:hover {
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(215,175,210,0.18);
+}
+
+html[data-bs-theme="light"] .smile-overlay {
+  background: rgba(237,227,223,0.35);
+}
+
+html[data-bs-theme="light"] .smile-overlay {
+  background: rgba(212,190,181,0.22);
+}
+
+html[data-bs-theme="light"] .smile-note {
+  background: #e5dad5;
+  box-shadow: 0 20px 60px rgba(235,205,230,0.2);
+}
+
+html[data-bs-theme="light"] .note-heart {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .note-title {
+  color: #483626;
+}
+
+html[data-bs-theme="light"] .smile-note h3 {
+  color: #1b1510;
+}
+
+html[data-bs-theme="light"] .note-bottom {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .close-note {
+  color: #483626;
+}
+
+html[data-bs-theme="light"] .close-note:hover {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .note-sparkle {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] #reviewForm {
+  background: #e4d8d3;
+}
+
+html[data-bs-theme="light"] #reviewForm input,
+html[data-bs-theme="light"] #reviewForm textarea {
+  border: 1px solid #d4c5bc;
+  background: #e4d9d3;
+}
+
+html[data-bs-theme="light"] #customAlert {
+  background: rgba(227,210,202,0.35);
+}
+
+html[data-bs-theme="light"] .alert-box {
+  background: #e5dad5;
+  box-shadow: 0 15px 40px rgba(225,175,195,0.2);
+  border: 2px solid #d3c4bb;
+}
+
+html[data-bs-theme="light"] .alert-icon {
+  color: #523e2c;
+}
+
+html[data-bs-theme="light"] .alert-box h3 {
+  color: #523e2c;
+}
+
+html[data-bs-theme="light"] .alert-box p {
+  color: #4c3928;
+}
+
+html[data-bs-theme="light"] .alert-box button {
+  color: #ffffff;
+}
+
+html[data-bs-theme="light"] .rating {
+  color: #aa6c2d;
+}
+
+html[data-bs-theme="light"] #reviewForm button {
+  color: #251d16;
+}
+
+html[data-bs-theme="light"] .fa-heart {
+  color: #251d16;
+}
+
+html[data-bs-theme="light"] .review-card {
+  background: #e4d8d3;
+}
+
+html[data-bs-theme="light"] .stars {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .review-card p {
+  color: #493727;
+}
+
+html[data-bs-theme="light"] .review-card hr {
+  border-top: 1px solid #d2c2b9;
+}
+
+html[data-bs-theme="light"] .customer span {
+  color: #725b60;
+}
+
+html[data-bs-theme="light"] .good-to-know {
+  background-color: #e5dad5;
+}
+
+html[data-bs-theme="light"] #good_to_know {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .faq-item {
+  border-bottom: 1px solid #d3c4ba;
+}
+
+html[data-bs-theme="light"] .faq-question {
+  color: #251d16;
+}
+
+html[data-bs-theme="light"] .faq-icon {
+  color: #4b1721;
+}
+
+html[data-bs-theme="light"] .faq-answer {
+  color: #4b1721;
+}
+
+html[data-bs-theme="light"] .contact-section {
+  background: #ede6e2;
+}
+
+html[data-bs-theme="light"] .contact-left {
+  color: #251d16;
+}
+
+html[data-bs-theme="light"] .small-title {
+  color: #251d16;
+}
+
+html[data-bs-theme="light"] .contact-left h1 {
+  color: #251d16;
+}
+
+html[data-bs-theme="light"] .contact-left h1 em {
+  color: #251d16;
+}
+
+html[data-bs-theme="light"] .contact-text {
+  color: #ffffff;
+  color: #251d16;
+}
+
+html[data-bs-theme="light"] .contact-detail {
+  color: #251d16;
+}
+
+html[data-bs-theme="light"] .circle-icon {
+  background: rgba(255,255,255,0.1);
+}
+
+html[data-bs-theme="light"] .map-box p {
+  color: #251d16;
+}
+
+html[data-bs-theme="light"] .message-box {
+  background: #e3d7d2;
+}
+
+html[data-bs-theme="light"] .message-box>p {
+  color: #58422f;
+}
+
+html[data-bs-theme="light"] .message-box input,
+html[data-bs-theme="light"] .message-box textarea {
+  border: 2px solid #d3c4bb;
+  background: #e5dad5;
+}
+
+html[data-bs-theme="light"] .message-box button {
+  color: #251d16;
+}
+
+html[data-bs-theme="light"] #messageAlert {
+  background: rgba(227,210,202,0.35);
+}
+
+html[data-bs-theme="light"] .message-alert-box {
+  background: #e5dad5;
+  box-shadow: 0 15px 40px rgba(225,175,195,0.2);
+  border: 2px solid #d3c4bb;
+}
+
+html[data-bs-theme="light"] .message-alert-icon {
+  color: #523e2c;
+}
+
+html[data-bs-theme="light"] .message-alert-box h3 {
+  color: #523e2c;
+}
+
+html[data-bs-theme="light"] .message-alert-box p {
+  color: #4c3928;
+}
+
+html[data-bs-theme="light"] .message-alert-box button {
+  color: #ffffff;
+}
+
+html[data-bs-theme="light"] .footer {
+  background: #f3e1df;
+  color: #4b1721;
+}
+
+html[data-bs-theme="light"] .footer-icon {
+  background: #e5dad5;
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .footer-title span {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .footer-brand>p {
+  color: #4b1721;
+}
+
+html[data-bs-theme="light"] .social-icons a {
+  background-color: #f5f5f5;
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .footer-column a {
+  color: #4b1721;
+}
+
+html[data-bs-theme="light"] .footer-bottom p {
+  color: #4b1721;
+}
+
+html[data-bs-theme="light"] .footer-bottom #smiles {
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .date-time-bar {
+  background: #e3d7d2;
+  color: #7f2335;
+}
+
+html[data-bs-theme="light"] .floating-hearts span {
+  color: #7f2335;
+}
+
+/* ---------- Manual fixes ---------- */
+html[data-bs-theme="light"] [style*="background:#221915"] {
+    background: #EADBCF !important;
+    color: #7A4A28 !important;
+}
+
+/* panels/buttons with a brown accent background keep light text in light mode */
+html[data-bs-theme="light"] .contact-left,
+html[data-bs-theme="light"] .contact-left h1,
+html[data-bs-theme="light"] .contact-left h1 em,
+html[data-bs-theme="light"] .contact-left p,
+html[data-bs-theme="light"] .contact-left .contact-detail,
+html[data-bs-theme="light"] .contact-left .contact-detail * ,
+html[data-bs-theme="light"] .contact-left .small-title,
+html[data-bs-theme="light"] .offer,
+html[data-bs-theme="light"] .offer h2,
+html[data-bs-theme="light"] .offer p,
+html[data-bs-theme="light"] .offer span,
+html[data-bs-theme="light"] .smile-btn,
+html[data-bs-theme="light"] #reviewForm button,
+html[data-bs-theme="light"] .message-box button,
+html[data-bs-theme="light"] .avatar {
+    color: #F7EFE8;
+}
+
+html[data-bs-theme="light"] .contact-left .circle-icon {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* Red Velvet light-mode finish */
+html[data-bs-theme="light"] body{background:#fbf3ed;color:#32171d}
+html[data-bs-theme="light"] nav,html[data-bs-theme="light"] .navbar{background:rgba(251,243,237,.94);border-color:rgba(127,35,53,.15)}
+html[data-bs-theme="light"] .hero{background:linear-gradient(135deg,#fff8f2 0%,#f3e1df 100%)}
+html[data-bs-theme="light"] .hero-bg{background:radial-gradient(55% 75% at 78% 45%,rgba(169,75,93,.22),transparent 70%),radial-gradient(40% 60% at 8% 90%,rgba(127,35,53,.10),transparent 70%)}
+html[data-bs-theme="light"] .hero-orb.o1{background:rgba(169,75,93,.25)}
+html[data-bs-theme="light"] .hero-orb.o2{background:rgba(127,35,53,.15)}
+html[data-bs-theme="light"] .hero-orb.o3{background:rgba(169,75,93,.13)}
+html[data-bs-theme="light"] .hero h1{color:#32171d}
+html[data-bs-theme="light"] .hero button:nth-of-type(2) a{color:#7f2335;background:#fffaf6}
+html[data-bs-theme="light"] .hero button a:hover{background:#a94b5d;color:#fff}
+html[data-bs-theme="light"] .hero-waves .w1 path{fill:#fffaf6}
+html[data-bs-theme="light"] .hero-waves .w2 path{fill:#f3e1df}
+html[data-bs-theme="light"] .hero-waves .w3 path{fill:#fbf3ed}
+html[data-bs-theme="light"] .btmhero,html[data-bs-theme="light"] .about .container-fluid{background:#fffaf6}
+html[data-bs-theme="light"] .visitor:hover,html[data-bs-theme="light"] .time:hover,html[data-bs-theme="light"] .date:hover{background:#f3e1df}
+
+
+/* ==========================================================
+   Theme parity fixes: merchandise, modal, and global surfaces
+   ========================================================== */
+html[data-bs-theme="light"] {
+  --rv-page: #fbf3ed;
+  --rv-surface: #fff8f2;
+  --rv-card: #fffaf6;
+  --rv-text: #32171d;
+  --rv-muted: #725b60;
+  --rv-border: #e4c9ce;
+  --rv-accent: #a94b5d;
+  --rv-accent-strong: #7f2335;
+  --rv-shadow: 0 10px 26px rgba(88, 28, 43, .09);
+  color-scheme: light;
+}
+html[data-bs-theme="dark"] {
+  --rv-page: #16070b;
+  --rv-surface: #250d14;
+  --rv-card: #2d1119;
+  --rv-text: #f8e9e8;
+  --rv-muted: #cdb6b7;
+  --rv-border: #5b2531;
+  --rv-accent: #b73550;
+  --rv-accent-strong: #8f1d35;
+  --rv-shadow: 0 12px 30px rgba(0, 0, 0, .22);
+  color-scheme: dark;
+}
+html[data-bs-theme="light"] body { background: #fbf3ed; color: #32171d; }
+html[data-bs-theme="dark"] body { background: #16070b; color: #f8e9e8; }
+html[data-bs-theme="light"] #main h1 { color: #32171d; }
+html[data-bs-theme="light"] #main h1 span { color: #a94b5d; }
+html[data-bs-theme="light"] #main .card-merch {
+  background: #fffaf6;
+  color: #32171d;
+  border-color: #e4c9ce;
+  box-shadow: 0 8px 24px rgba(127, 35, 53, .09);
+}
+html[data-bs-theme="light"] #main .card-merch .img-box { background: #f3e1df; }
+html[data-bs-theme="light"] #main .card-merch .info > div:first-child { color: #7f2335 !important; }
+html[data-bs-theme="light"] #main .card-merch .info h3 { color: #32171d; }
+html[data-bs-theme="light"] #main .card-merch .price { color: #7f2335; }
+html[data-bs-theme="light"] #main .card-merch .btn-cart,
+html[data-bs-theme="light"] #main .card-merch .btn-view { background: #7f2335; border-color: #7f2335; color: #fff; }
+html[data-bs-theme="light"] #main .card-merch .btn-cart:hover,
+html[data-bs-theme="light"] #main .card-merch .btn-view:hover { background: #a94b5d; border-color: #a94b5d; }
+html[data-bs-theme="light"] #productModal .modal-content { background: #fffaf6; color: #32171d; }
+html[data-bs-theme="light"] #productModal .modal-left { background: #f3e1df; }
+html[data-bs-theme="light"] #productModal #modalTitle { color: #32171d; }
+html[data-bs-theme="light"] #productModal #modalPrice { color: #7f2335 !important; }
+html[data-bs-theme="light"] #productModal #modalDesc { color: #725b60 !important; }
+html[data-bs-theme="light"] .cart-btn-top { background: #fffaf6; color: #7f2335; border-color: #e4c9ce; }
+html[data-bs-theme="light"] .offcanvas-end { background: #fff8f2; color: #32171d; }
+html[data-bs-theme="light"] .cart-item { background: #fffaf6; color: #32171d; border-color: #e4c9ce; }
+html[data-bs-theme="light"] .cart-item b { color: #32171d; }
+
+/* Responsive behavior should be identical regardless of selected theme. */
+@media (max-width: 991.98px) {
+  html[data-bs-theme] .navbar-collapse { padding-bottom: .75rem; }
+}
+@media (max-width: 575.98px) {
+  html[data-bs-theme] #main h1 { font-size: clamp(1.7rem, 7vw, 2rem); }
+}
+
+
+/* ==========================================================
+   Bakerz Bite visual refinements — restrained, theme-only
+   Keep these rules presentational; do not change app behavior.
+   ========================================================== */
+
+/* Slightly deeper, still-light blush palette */
+html[data-bs-theme="light"] {
+  --rv-page: #f2e4df;
+  --rv-surface: #ead6d3;
+  --rv-card: #f5e8e4;
+  --rv-text: #351720;
+  --rv-muted: #68444d;
+  --rv-border: #d2aeb6;
+  --rv-accent: #96334b;
+  --rv-accent-strong: #702036;
+  --bg: #f2e4df;
+  --line: #d2aeb6;
+  --muted: #68444d;
+  --pink: #702036;
+}
+
+html[data-bs-theme="light"] body {
+  background-color: #f2e4df;
+  color: #351720;
+}
+
+/* Readable palette colors for common headings and supporting copy */
+html[data-bs-theme="light"] .section-title,
+html[data-bs-theme="light"] .section-heading,
+html[data-bs-theme="light"] .offers-head h2,
+html[data-bs-theme="light"] #faq h1,
+html[data-bs-theme="light"] #faq h2,
+html[data-bs-theme="light"] .faq-section h1,
+html[data-bs-theme="light"] .faq-section h2 {
+  color: #702036;
+}
+
+html[data-bs-theme="light"] .offers-head p,
+html[data-bs-theme="light"] .faq-answer,
+html[data-bs-theme="light"] .faq-question {
+  color: #48232d;
+}
+
+/* Offers: give the light theme its own cohesive rose/cream treatment */
+html[data-bs-theme="light"] #offers {
+  background: linear-gradient(135deg, #ead2d2 0%, #e2c0c7 52%, #d7aab6 100%);
+  color: #351720;
+}
+
+html[data-bs-theme="light"] #offers .offers-head h2 {
+  color: #702036;
+}
+
+html[data-bs-theme="light"] #offers .offers-head p {
+  color: #59313c;
+}
+
+html[data-bs-theme="light"] #offers .offer-card {
+  background: linear-gradient(180deg, rgba(255, 248, 246, .94), rgba(245, 226, 225, .96));
+  border: 1px solid #c995a2;
+  box-shadow: 0 8px 22px rgba(82, 27, 43, .10);
+  color: #351720;
+}
+
+html[data-bs-theme="light"] #offers .offer-card h3,
+html[data-bs-theme="light"] #offers .offer-card p,
+html[data-bs-theme="light"] #offers .offer-card .description {
+  color: #48232d;
+}
+
+html[data-bs-theme="light"] #offers .offer-card .badge {
+  background: #702036;
+  color: #fff3ee;
+}
+
+html[data-bs-theme="light"] #offers .offer-card .icon,
+html[data-bs-theme="light"] #offers .offer-card .valid {
+  color: #702036;
+}
+
+html[data-bs-theme="light"] #offers .offer-card .claim {
+  color: #702036;
+}
+
+html[data-bs-theme="light"] #offers .offer-card:hover {
+  background: #f8ece8;
+  box-shadow: 0 14px 28px rgba(82, 27, 43, .16);
+}
+
+/* FAQ stays a single CSS-controlled accordion in either theme */
+html[data-bs-theme="light"] .faq-item {
+  border-color: #d2aeb6;
+}
+
+html[data-bs-theme="light"] .faq-question {
+  color: #48232d;
+}
+
+html[data-bs-theme="light"] .faq-icon,
+html[data-bs-theme="light"] .faq-answer {
+  color: #68444d;
+}
+
+html[data-bs-theme="dark"] .faq-question {
+  color: #f3e1df;
+}
+
+html[data-bs-theme="dark"] .faq-icon,
+html[data-bs-theme="dark"] .faq-answer {
+  color: #cdb6b7;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid #a94b5d;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+html[data-bs-theme="light"] .footer {
+  background-color:#a94b5d;
+}

@@ -1,0 +1,458 @@
+/* ==========================================================
+   Bakerz Bite - responsive layer
+   Loaded LAST (after style.css + theme.css). Purely additive:
+   desktop (>=1200px) look is unchanged; everything below is
+   scoped to tablet / phone breakpoints. Works for both the
+   dark and light themes (no colours are touched here).
+   ========================================================== */
+
+/* ---------- Global safety net ---------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: clip;          /* stops sideways scroll from decorative shapes */
+}
+img, svg, video, iframe { max-width: 100%; }
+img { height: auto; }
+
+/* keep content comfortably readable on very large monitors */
+@media (min-width: 1700px) {
+  .navbar > .container-fluid,
+  .hero > .container-fluid,
+  .about > .container-fluid,
+  .footer { max-width: 1680px; margin-inline: auto; }
+}
+
+/* notch / rounded-corner phones */
+@supports (padding: max(0px)) {
+  .navbar > .container-fluid {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+  .footer {
+    padding-bottom: max(70px, calc(env(safe-area-inset-bottom) + 40px));
+  }
+}
+
+/* ---------- Large tablets / small laptops (<= 1199px) ---------- */
+@media (max-width: 1199.98px) {
+  .hero h1 { font-size: clamp(2.6rem, 5.4vw, 4rem); }
+  .footer {
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 44px;
+  }
+  .footer-column:last-child { grid-column: 1 / -1; }
+  .contact-left h1 { font-size: clamp(2.4rem, 5vw, 3.75rem); }
+}
+
+/* ---------- Tablets & below (<= 991px) ---------- */
+@media (max-width: 991.98px) {
+  /* navbar: let the open menu scroll if the screen is short (landscape phones) */
+  .navbar-collapse {
+    max-height: calc(100vh - 80px);
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+  }
+  .navbar-nav .nav-link { padding-block: .7rem; }          /* bigger tap targets */
+  .navbar .carticon, .navbar .cart { margin-left: 0; }
+  .theme-toggle { min-width: 42px; min-height: 42px; }
+
+  /* hero */
+  .hero { min-height: 0; padding: 40px 0 120px; }
+  .hero .row > [class*="col-lg-"]:empty { display: none; }   /* empty spacer col */
+  .hero .col-lg-6 { text-align: center; }
+  .hero ul { justify-content: center; margin-left: 0 !important; flex-wrap: wrap; gap: 8px 24px; }
+  .hero h1 { font-size: clamp(2.3rem, 7.5vw, 3.5rem); }
+  .hero-art { max-width: min(420px, 88%); margin-inline: auto; }
+  .hero::after { width: 240px; height: 240px; left: -110px; bottom: -130px; }
+
+  /* stats strip */
+  .btmhero { flex-wrap: wrap; border-radius: 36px; }
+  .btmhero > * { flex: 1 1 200px; }
+
+  /* about */
+  .about .container-fluid { border-radius: 28px; }
+  .about .container-fluid::before { width: 160px; height: 160px; right: -70px; top: -60px; }
+
+  /* footer */
+  .footer { grid-template-columns: 1fr 1fr; gap: 36px; padding: 60px 6% 90px; }
+  .footer-brand, .footer-column:last-child { grid-column: 1 / -1; }
+  .footer-brand > p { font-size: 17px; }
+  .social-icons a { width: 56px; height: 56px; font-size: 22px; }
+  .footer-bottom p { font-size: 15px; }
+  .date-time-bar { width: 100%; max-width: 500px; }
+
+  /* contact */
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 100px 5% 0;
+  }
+  .contact-left { padding: 48px 32px; }
+
+  /* cart drawer + dialogs */
+  .offcanvas-end { width: min(92vw, 380px); }
+  .modal-dialog { margin-inline: auto; }
+  .alert-box, .message-alert-box { width: min(350px, 90vw); }
+  .smile-note { width: min(420px, 90vw); max-width: 90vw; padding: 44px 30px; }
+}
+
+/* ---------- Phones (<= 767px) ---------- */
+@media (max-width: 767.98px) {
+  body { font-size: 15px; }
+
+  /* section rhythm */
+  .products-heading { margin: 40px 0 24px; }
+  .products-heading h1 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+  .offers-head h2 { font-size: clamp(1.6rem, 7vw, 2rem); }
+  .heading h1 { font-size: clamp(1.7rem, 7.5vw, 2.4rem); }
+  #Frequently { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .good-to-know { padding: 44px 0; }
+
+  /* hero buttons sit side by side, then wrap neatly */
+  .hero button { margin-inline: 4px; }
+  .hero h1 br, .hero p br { display: none; }
+
+  /* stats strip stacks as clean rows */
+  .btmhero { flex-direction: column; border-radius: 28px; }
+  .btmhero > * { flex: 0 0 auto; width: 100%; padding-block: 14px; }
+
+  /* product filter panel */
+  .filter-box { padding: 18px 16px; border-radius: 18px; }
+  .filter-box .row > [class*="col-"] { margin-bottom: .5rem; }
+  #priceRange { width: 100%; }
+
+  /* cards */
+  .card .img-box { height: clamp(200px, 62vw, 300px); }
+  #productsContainer { --bs-gutter-y: 1.1rem; }
+
+  /* reviews */
+  #reviewForm { padding: 22px 18px; border-radius: 18px; }
+  .reviews-layout { gap: 24px; margin-top: 28px; }
+  .top-cards { gap: 14px; }
+
+  /* FAQ */
+  .faq-question { padding-inline: 4px; gap: 12px; }
+
+  /* contact + footer */
+  .contact-section { padding: 70px 18px 0; }
+  .contact-left { padding: 34px 22px; border-radius: 18px; }
+  .contact-left h1 { font-size: clamp(2rem, 9vw, 2.6rem); }
+  .message-box { padding: 24px 18px; }
+  .footer { grid-template-columns: 1fr; padding: 48px 22px 80px; gap: 28px; }
+  .footer-column { margin-bottom: 8px; }
+  .footer-title { font-size: 28px; }
+  .social-icons { flex-wrap: wrap; }
+  .social-icons a { width: 46px; height: 46px; font-size: 18px; }
+  .footer-bottom p { font-size: 13px; }
+
+  /* floating / fixed bits never cover content */
+  .toast-container, .cart-toast { max-width: calc(100vw - 24px); }
+}
+
+/* ---------- Small phones (<= 575px) ---------- */
+@media (max-width: 575.98px) {
+  .container, .container-fluid { padding-left: 16px; padding-right: 16px; }
+  .navbar-brand .logo { font-size: 1.35rem; }
+
+  .hero { padding: 28px 0 100px; }
+  .hero .mt-5 { margin-top: 1rem !important; }
+  .hero h1 { font-size: clamp(2rem, 9.5vw, 2.6rem); line-height: 1.1; }
+  .hero button { width: min(100%, 280px); margin: 0 auto 10px; display: block; }
+  .hero button a { display: block; }
+  .hero-art { max-width: 92%; }
+  .hero-waves { height: 70px; }
+
+  .about .container-fluid { border-radius: 22px; }
+
+  /* modals: near full-screen with safe scrolling */
+  .modal-dialog { margin: .5rem; max-width: none; }
+  .modal-content { border-radius: 18px; }
+  #productModal .modal-body, #merchProductModal .modal-body { padding: 14px; }
+  .modal-product-img { height: 200px; }
+  .checkout-items { max-height: 28vh; overflow-y: auto; }
+  #checkoutModal .modal-dialog { margin: .5rem; }
+
+  .offcanvas-end { width: 100vw; max-width: 100vw; }
+  .alert-box, .message-alert-box { padding: 26px 20px; }
+  .smile-note { padding: 36px 22px; }
+
+  .gallery { gap: 14px; }
+  .offers-grid { gap: 14px; }
+}
+
+/* ---------- Very small phones (<= 360px) ---------- */
+@media (max-width: 359.98px) {
+  .navbar-brand .logo { font-size: 1.2rem; }
+  .hero h1 { font-size: 1.85rem; }
+  .contact-left h1 { font-size: 1.8rem; }
+  .footer-title { font-size: 24px; }
+  .btmhero > * { padding-inline: 10px; }
+}
+
+/* ---------- Short landscape phones ---------- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero { padding: 24px 0 90px; }
+  .modal-dialog { margin: .5rem auto; }
+  .modal-dialog-scrollable .modal-content { max-height: calc(100vh - 1rem); }
+}
+
+/* ---------- Touch devices: no sticky hover lifts ---------- */
+@media (hover: none) {
+  .card:hover, #main .card-merch:hover { transform: none; }
+  .card:hover .img-box img { transform: none; }
+}
+
+
+/* Navbar logo icon sizing */
+@media (max-width: 991.98px) {
+  .brand-logo-img { margin-left: 0; height: 40px; }
+  .navbar-brand .logo { margin-left: 8px; }
+}
+@media (max-width: 575.98px) {
+  .brand-logo-img { height: 34px; }
+}
+@media (max-width: 359.98px) {
+  .brand-logo-img { height: 30px; }
+}
+
+
+/* ===== Merch: product-style cards + modal identical to #productModal ===== */
+#main .card-merch .info { padding: 18px; }
+#main .card-merch .info h3 { margin: 5px 0 8px; }
+#main .card-merch .merch-bottom { margin-top: auto; }
+#main .card-merch .view-btn { font-size: 14px; }
+#main .card-merch .stars { color: #b73550; }
+#main .card-merch .rating-number { color: #cdb6b7; font-size: 13px; }
+html[data-bs-theme="light"] #main .card-merch .stars { color: #7f2335; }
+html[data-bs-theme="light"] #main .card-merch .rating-number { color: #725b60; }
+
+html[data-bs-theme="dark"] #merchProductModal .modal-content { background: #250d14; color: #f8e9e8; border: 1px solid #5b2531; }
+html[data-bs-theme="dark"] #merchProductModal .modal-left { background: #32111c; }
+html[data-bs-theme="dark"] #merchProductModal #merchModalTitle { color: #f8e9e8; }
+html[data-bs-theme="dark"] #merchProductModal #merchModalPrice { color: #f1a5b2 !important; }
+html[data-bs-theme="dark"] #merchProductModal .btn-close { filter: invert(1) grayscale(100%); }
+html[data-bs-theme="light"] #merchProductModal .modal-content { background: #fffaf6; color: #32171d; }
+html[data-bs-theme="light"] #merchProductModal .modal-left { background: #f3e1df; }
+html[data-bs-theme="light"] #merchProductModal #merchModalTitle { color: #32171d; }
+html[data-bs-theme="light"] #merchProductModal #merchModalPrice { color: #7f2335 !important; }
+#merchProductModal .modal-product-img { height: 340px; }
+@media (max-width: 575.98px) {
+  #merchProductModal .modal-left { min-height: 220px; }
+  #merchProductModal .modal-product-img { height: 220px; }
+}
+
+/* ===== Contact: smaller "Send us a message" box + real map ===== */
+.contact-section { padding-top: 90px; align-items: stretch; gap: 24px; }
+.contact-left { padding: 48px 40px; }
+.map-box {
+  height: 280px;
+  margin-top: 32px;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid #8f1d35;
+  display: block;
+}
+.map-box iframe { display: block; width: 100%; height: 100%; border: 0; }
+.message-box { padding: 36px 34px; display: flex; flex-direction: column; }
+.message-box h2 { font-size: 34px; margin-bottom: 8px; }
+.message-box > p { font-size: 16px; margin-bottom: 24px; }
+.message-box form { gap: 14px; flex: 1; }
+.message-box input, .message-box textarea { padding: 13px 18px; font-size: 16px; border-radius: 13px; }
+.message-box textarea { height: 120px; flex: 1; min-height: 120px; }
+.message-box button { padding: 12px 28px; font-size: 16px; }
+@media (max-width: 991.98px) {
+  .contact-section { padding-top: 70px; }
+  .contact-left { padding: 34px 24px; }
+  .message-box { padding: 26px 20px; }
+  .map-box { height: 240px; }
+}
+
+/* ===== Order confirmation popup (checkout) ===== */
+#orderPopup { display: none; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; background: rgba(10,3,6,.6); padding: 16px; }
+.order-popup-box { width: min(400px, 100%); background: #250d14; color: #f8e9e8; border: 1px solid #5b2531; border-radius: 24px; padding: 32px 28px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,.45); }
+.order-popup-icon { font-size: 52px; color: #f1a5b2; line-height: 1; margin-bottom: 10px; }
+.order-popup-box h3 { font-family: "Playfair Display", serif; font-size: 26px; margin: 0 0 6px; }
+.order-popup-name { color: #cdb6b7; font-size: 15px; margin-bottom: 18px; }
+.order-popup-details { background: #2d1119; border-radius: 14px; padding: 6px 16px; margin-bottom: 14px; }
+.order-popup-details div { display: flex; justify-content: space-between; padding: 9px 0; font-size: 15px; }
+.order-popup-details div + div { border-top: 1px solid #5b2531; }
+.order-popup-details span { color: #cdb6b7; }
+.order-popup-details strong { color: #f1a5b2; }
+.order-popup-note { font-size: 12px; color: #cdb6b7; margin-bottom: 18px; }
+.order-popup-box button { background: #8f1d35; color: #fff; border: none; border-radius: 30px; padding: 11px 28px; font-weight: 700; }
+.order-popup-box button:hover { background: #a94b5d; }
+html[data-bs-theme="light"] .order-popup-box { background: #fffaf6; color: #32171d; border-color: #e3cfc9; }
+html[data-bs-theme="light"] .order-popup-icon, html[data-bs-theme="light"] .order-popup-details strong { color: #7f2335; }
+html[data-bs-theme="light"] .order-popup-name, html[data-bs-theme="light"] .order-popup-details span, html[data-bs-theme="light"] .order-popup-note { color: #725b60; }
+html[data-bs-theme="light"] .order-popup-details { background: #f3e1df; }
+html[data-bs-theme="light"] .order-popup-details div + div { border-color: #e3cfc9; }
+
+
+/* ===== Send us a message: redesigned ===== */
+.message-box { padding: 36px 34px; display: flex; flex-direction: column; justify-content: center; }
+.msg-head { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+.msg-badge { flex: 0 0 56px; height: 56px; border-radius: 18px; display: grid; place-items: center; font-size: 22px; color: #f3e1df; background: linear-gradient(135deg, #8f1d35, #b73550); box-shadow: 0 8px 20px rgba(143,29,53,.35); }
+.message-box .msg-head h2 { font-size: 30px; margin: 0 0 4px; }
+.message-box .msg-head p { font-size: 15px; margin: 0; color: #cdb6b7; }
+.message-box .msg-form { display: flex; flex-direction: column; gap: 14px; flex: 0 0 auto; }
+.msg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.msg-field { position: relative; display: block; margin: 0; }
+.msg-field > i { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: #b73550; font-size: 15px; pointer-events: none; }
+.msg-field.msg-area > i { top: 22px; transform: none; }
+.message-box .msg-field input, .message-box .msg-field textarea { width: 100%; padding: 14px 18px 14px 46px; font-size: 16px; border-radius: 14px; border: 2px solid #5b2531; transition: border-color .2s, box-shadow .2s; }
+.message-box .msg-field textarea { height: 130px; min-height: 130px; flex: none; resize: none; }
+.message-box .msg-field input:focus, .message-box .msg-field textarea:focus { border-color: #b73550; box-shadow: 0 0 0 4px rgba(183,55,80,.18); }
+.message-box .msg-send { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 28px; font-size: 16px; font-weight: 700; border-radius: 14px; background: linear-gradient(135deg, #8f1d35, #b73550); color: #fff; transition: transform .2s, box-shadow .2s; }
+.message-box .msg-send:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(143,29,53,.4); }
+html[data-bs-theme="light"] .message-box .msg-head p { color: #58422f; }
+html[data-bs-theme="light"] .message-box .msg-field input:focus, html[data-bs-theme="light"] .message-box .msg-field textarea:focus { border-color: #8f1d35; }
+html[data-bs-theme="light"] .message-box .msg-send, html[data-bs-theme="light"] .msg-badge { color: #fff; }
+@media (max-width: 575.98px) {
+  .msg-row { grid-template-columns: 1fr; }
+  .message-box { padding: 24px 18px; }
+  .message-box .msg-head h2 { font-size: 24px; }
+}
+
+/* ===== About: image and text closer ===== */
+@media (min-width: 992px) {
+  .about .container-fluid { gap: 36px; align-items: center; }
+  .about .container-fluid > .row:first-child { flex: 0 0 42%; max-width: 42%; margin: 0; }
+  .about .container-fluid > .row:first-child > .col-lg-1 { display: none; }
+  .about .container-fluid > .row:first-child > .col-lg-6 { flex: 0 0 100%; max-width: 100%; }
+  .about .container-fluid > .row:first-child img { width: 100%; height: auto; margin-top: 40px; margin-bottom: 40px; }
+  .about .container-fluid > .story { width: auto !important; flex: 1 1 0; min-width: 0; margin: 0; }
+}
+
+
+/* ===== Contact: compact (Say hello + Send us a message) ===== */
+.contact-section { padding-top: 60px; padding-inline: max(5%, calc((100% - 1100px) / 2)); gap: 20px; }
+.contact-section .contact-left { padding: 30px 30px; border-radius: 18px; }
+.contact-section .small-title { font-size: 13px; letter-spacing: 3px; margin-bottom: 14px; }
+.contact-section .contact-left h1 { font-size: clamp(1.7rem, 3.4vw, 2.25rem); line-height: 1.12; margin-bottom: 14px; }
+.contact-section .contact-text { font-size: 15px; line-height: 1.5; margin-bottom: 20px; }
+.contact-section .contact-detail { font-size: 15px; gap: 14px; margin-bottom: 12px; }
+.contact-section .circle-icon { width: 42px; height: 42px; font-size: 16px; }
+.contact-section .map-box { height: 160px; margin-top: 16px; border-radius: 14px; }
+
+.contact-section .message-box { padding: 26px 26px; border-radius: 18px; }
+.contact-section .msg-head { margin-bottom: 18px; gap: 12px; }
+.contact-section .msg-badge { flex: 0 0 44px; height: 44px; font-size: 18px; border-radius: 14px; }
+.contact-section .message-box .msg-head h2 { font-size: 22px; margin-bottom: 2px; }
+.contact-section .message-box .msg-head p { font-size: 13px; }
+.contact-section .message-box .msg-form { gap: 10px; }
+.contact-section .msg-row { gap: 10px; }
+.contact-section .message-box .msg-field input,
+.contact-section .message-box .msg-field textarea { padding: 10px 14px 10px 40px; font-size: 14px; border-radius: 12px; }
+.contact-section .msg-field > i { left: 15px; font-size: 13px; }
+.contact-section .msg-field.msg-area > i { top: 14px; }
+.contact-section .message-box .msg-field textarea { height: 90px; min-height: 90px; }
+.contact-section .message-box .msg-send { padding: 11px 22px; font-size: 15px; border-radius: 12px; }
+@media (max-width: 991.98px) {
+  .contact-section { padding-top: 50px; padding-inline: 5%; }
+  .contact-section .contact-left { padding: 26px 22px; }
+  .contact-section .message-box { padding: 22px 18px; }
+}
+
+
+/* ===== Contact: slightly smaller fonts ===== */
+.contact-section .small-title { font-size: 11px; letter-spacing: 2.5px; }
+.contact-section .contact-left h1 { font-size: clamp(1.4rem, 2.8vw, 1.85rem); }
+.contact-section .contact-text { font-size: 13px; }
+.contact-section .contact-detail { font-size: 13px; }
+.contact-section .circle-icon { width: 36px; height: 36px; font-size: 14px; }
+.contact-section .message-box .msg-head h2 { font-size: 19px; }
+.contact-section .message-box .msg-head p { font-size: 12px; }
+.contact-section .message-box .msg-field input,
+.contact-section .message-box .msg-field textarea { font-size: 13px; }
+.contact-section .message-box .msg-send { font-size: 14px; }
+
+
+/* ===== Contact: fonts nudged up a little ===== */
+.contact-section .small-title { font-size: 12px; letter-spacing: 3px; }
+.contact-section .contact-left h1 { font-size: clamp(1.55rem, 3.1vw, 2.05rem); }
+.contact-section .contact-text { font-size: 14px; }
+.contact-section .contact-detail { font-size: 14px; }
+.contact-section .circle-icon { width: 39px; height: 39px; font-size: 15px; }
+.contact-section .message-box .msg-head h2 { font-size: 20px; }
+.contact-section .message-box .msg-head p { font-size: 12.5px; }
+.contact-section .message-box .msg-field input,
+.contact-section .message-box .msg-field textarea { font-size: 13.5px; }
+.contact-section .message-box .msg-send { font-size: 14.5px; }
+
+
+/* ===== Contact: fonts nudged up a bit more ===== */
+.contact-section .small-title { font-size: 12.5px; }
+.contact-section .contact-left h1 { font-size: clamp(1.7rem, 3.3vw, 2.25rem); }
+.contact-section .contact-text { font-size: 15px; }
+.contact-section .contact-detail { font-size: 15px; }
+.contact-section .circle-icon { width: 41px; height: 41px; font-size: 16px; }
+.contact-section .message-box .msg-head h2 { font-size: 22px; }
+.contact-section .message-box .msg-head p { font-size: 13px; }
+.contact-section .message-box .msg-field input,
+.contact-section .message-box .msg-field textarea { font-size: 14.5px; }
+.contact-section .message-box .msg-send { font-size: 15px; }
+
+
+/* ===== Contact: fonts nudged up once more ===== */
+.contact-section .small-title { font-size: 13px; }
+.contact-section .contact-left h1 { font-size: clamp(1.85rem, 3.6vw, 2.5rem); }
+.contact-section .contact-text { font-size: 16px; }
+.contact-section .contact-detail { font-size: 16px; }
+.contact-section .circle-icon { width: 44px; height: 44px; font-size: 17px; }
+.contact-section .message-box .msg-head h2 { font-size: 24px; }
+.contact-section .message-box .msg-head p { font-size: 14px; }
+.contact-section .message-box .msg-field input,
+.contact-section .message-box .msg-field textarea { font-size: 15.5px; }
+.contact-section .message-box .msg-send { font-size: 16px; }
+
+
+/* ===== Contact: final comfortable sizing ===== */
+.contact-section .contact-left { padding: 36px 34px; }
+.contact-section .message-box { padding: 32px 30px; }
+.contact-section .small-title { font-size: 14px; margin-bottom: 18px; }
+.contact-section .contact-left h1 { font-size: clamp(2rem, 3.9vw, 2.75rem); margin-bottom: 18px; }
+.contact-section .contact-text { font-size: 17.5px; margin-bottom: 24px; }
+.contact-section .contact-detail { font-size: 17.5px; gap: 16px; margin-bottom: 14px; }
+.contact-section .circle-icon { width: 48px; height: 48px; font-size: 19px; }
+.contact-section .map-box { height: 190px; margin-top: 20px; }
+.contact-section .msg-head { margin-bottom: 22px; }
+.contact-section .msg-badge { flex: 0 0 50px; height: 50px; font-size: 20px; }
+.contact-section .message-box .msg-head h2 { font-size: 27px; }
+.contact-section .message-box .msg-head p { font-size: 15px; }
+.contact-section .message-box .msg-form { gap: 12px; }
+.contact-section .message-box .msg-field input,
+.contact-section .message-box .msg-field textarea { font-size: 16.5px; padding: 12px 16px 12px 44px; }
+.contact-section .msg-field > i { font-size: 15px; }
+.contact-section .message-box .msg-field textarea { height: 110px; min-height: 110px; }
+.contact-section .message-box .msg-send { font-size: 17px; padding: 13px 24px; }
+@media (max-width: 575.98px) {
+  .contact-section .contact-left { padding: 26px 20px; }
+  .contact-section .message-box { padding: 24px 18px; }
+  .contact-section .contact-text, .contact-section .contact-detail { font-size: 15.5px; }
+}
+
+
+/* ===== Contact: a little wider ===== */
+@media (min-width: 992px) {
+  .contact-section { padding-inline: max(4%, calc((100% - 1240px) / 2)); }
+}
+
+/* ===== Footer: compact ===== */
+@media (min-width: 576px) {
+  .footer { padding: 48px 5% 70px; gap: 36px; }
+  .footer .footer-logo { margin-bottom: 18px; }
+  .footer .footer-icon { width: 52px; height: 52px; font-size: 20px; }
+  .footer .footer-title { font-size: 32px; margin-left: 14px; }
+  .footer .footer-brand > p { font-size: 15px; line-height: 1.6; }
+  .footer .social-icons { gap: 12px; margin-top: 20px; }
+  .footer .social-icons a { width: 42px; height: 42px; font-size: 17px; }
+  .footer .footer-column h3 { font-size: 22px; margin-bottom: 16px; }
+  .footer .footer-column a { font-size: 15px; margin-bottom: 11px; }
+  .footer .footer-bottom { padding-top: 24px; margin-top: 4px; border-top-width: 1px; }
+  .footer .footer-bottom p { font-size: 14px; margin-bottom: 12px; }
+  .footer .date-time-bar { padding: 10px 0; font-size: 14px; }
+}
